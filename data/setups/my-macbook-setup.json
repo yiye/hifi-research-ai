@@ -148,8 +148,8 @@
           "Slow Lowpass",
           "Slow Highpass"
         ],
-        "currentSetting": "Slow Lowpass",
-        "notes": "Slow Lowpass 通常提供更自然的声音，减少高频相位失真"
+        "currentSetting": "Fast Highpass",
+        "notes": "用户最终选择 Fast Highpass（最小相位 + 急剧滚降）：既无预振铃的刺激感，又保留完整的高频延伸和细节。相比 Slow Highpass 的高频衰减，Fast Highpass 在 20kHz 内更平坦，让 VULKAN2 发挥完整实力但不刺耳"
       },
       
       "eq": {
@@ -354,44 +354,97 @@
   },
   
   "recommendedSettings": {
-    "description": "针对 VULKAN2 的推荐设置",
+    "description": "针对 VULKAN2 的推荐设置（基于用户听感偏好调整）",
     "settings": [
+      {
+        "scenario": "日常听歌（用户最佳设置）⭐⭐⭐",
+        "gain": "Low",
+        "filter": "Fast Highpass",
+        "eq": "Vocal 或 OFF",
+        "volume": "40-60% (根据个人听感)",
+        "reason": "经实际对比确认的最佳设置：无预振铃 + 完整高频 = 清晰细腻不刺激，适合所有音乐类型和长时间听音"
+      },
       {
         "scenario": "流行人声",
         "gain": "Low",
-        "filter": "Slow Lowpass",
+        "filter": "Fast Highpass",
         "eq": "Vocal 或 OFF",
-        "volume": "40-60% (根据个人听感)",
-        "reason": "VULKAN2 本身针对流行人声优化，高灵敏度适合低增益"
+        "volume": "40-60%",
+        "reason": "Fast Highpass 让人声更清晰透亮，齿音清楚但不刺耳，空气感好"
       },
       {
         "scenario": "古典音乐",
         "gain": "Middle",
-        "filter": "Slow Lowpass",
-        "eq": "Classical",
+        "filter": "Fast Highpass",
+        "eq": "Classical 或 OFF",
         "volume": "45-65%",
-        "reason": "古典音乐动态范围大，可适当提升增益以保留微动态"
+        "reason": "完整的高频延伸保留乐器泛音和音乐厅空间感，无预振铃的自然瞬态"
       },
       {
         "scenario": "摇滚/金属",
         "gain": "Low",
-        "filter": "Fast Lowpass",
-        "eq": "Rock 或 Metal",
+        "filter": "Fast Highpass",
+        "eq": "Metal 或 OFF",
         "volume": "50-70%",
-        "reason": "快速滤波器提供更好的瞬态响应"
+        "reason": "快速最小相位提供强劲瞬态，钹片清脆、吉他失真质感好，冲击力强但不刺激"
       },
       {
         "scenario": "纯净监听",
         "gain": "Low",
-        "filter": "Slow Lowpass",
+        "filter": "Fast Highpass",
         "eq": "OFF",
         "volume": "按需调整",
-        "reason": "关闭 EQ，使用原始调音"
+        "reason": "关闭 EQ，Fast Highpass 提供最接近原始调音的自然声音（20kHz 内 ±0.1dB）"
+      },
+      {
+        "scenario": "Hi-Res 音源（可选）",
+        "gain": "Low",
+        "filter": "Fast Lowpass",
+        "eq": "OFF",
+        "volume": "40-60%",
+        "reason": "如果不觉得刺耳，线性相位可保留最完整的频响（20kHz 内 ±0.01dB）"
       }
     ]
   },
   
   "listeningNotes": {
+    "userPreferences": {
+      "hearingProfile": "高频敏感型",
+      "description": "对高频的质地和细节非常敏感，容易察觉预振铃等微小的高频差异",
+      "preferredCharacteristics": [
+        "柔和自然的高频",
+        "无刺激感的瞬态",
+        "模拟味浓的音色",
+        "长时间耐听不疲劳"
+      ],
+      "avoidCharacteristics": [
+        "过亮的高频",
+        "锐利的齿音",
+        "数码感重的声音",
+        "带预振铃的线性相位滤波器"
+      ],
+      "filterPreference": {
+        "preferred": "Fast Highpass (最小相位 + 急剧滚降)",
+        "reason": "完美平衡：无预振铃的自然瞬态 + 20kHz 内完整平坦的频响。既避免了线性相位的刺激感，又保留了 VULKAN2 的高频细节和空气感",
+        "comparison": {
+          "fastHighpass": "✅ 最佳选择 - 清晰、细腻、不刺激",
+          "slowHighpass": "不错但高频略暗，18kHz 以上衰减让声音略显柔和",
+          "fastLowpass": "❌ 高频刺耳 - 预振铃 + 完整高频 = 过于刺激",
+          "slowLowpass": "❌ 仍有刺激感 - 预振铃虽弱但仍可感知"
+        },
+        "avoided": "所有 Lowpass 模式（线性相位）",
+        "avoidReason": "预振铃导致高频刺耳，尤其与 VULKAN2 的动铁高频叠加后过于刺激"
+      },
+      "notes": [
+        "属于 30-40% 能明显感知预振铃的听者",
+        "圈铁耳机的高频瞬态快，会放大滤波器的预振铃效应",
+        "关键发现：并非不喜欢高频细节，而是不喜欢预振铃带来的刺激感",
+        "Fast Highpass 证明了可以兼得：完整高频 + 无预振铃 = 最佳听感",
+        "Slow Highpass 的高频衰减反而让声音略显暗淡，不如 Fast Highpass 生动",
+        "最终结论：最小相位的 Fast Highpass 最适合，既保留细节又不刺激"
+      ]
+    },
+    
     "soundSignature": {
       "overall": "饱满温润、细腻耐听，人声靠前",
       "bass": "量感充足，下潜深，双动圈提供强悍的低频基础",
@@ -476,10 +529,42 @@
   },
   
   "metadata": {
-    "configVersion": "1.0",
+    "configVersion": "1.2",
     "lastReviewed": "2024-11-24",
+    "lastUpdated": "2024-11-24",
     "dataQuality": "high",
-    "notes": "基于官方规格、产品铭牌和实际使用经验创建"
+    "notes": "基于官方规格、产品铭牌和实际使用经验创建",
+    "changeLog": [
+      {
+        "version": "1.2",
+        "date": "2024-11-24",
+        "changes": [
+          "进一步优化：Slow Highpass → Fast Highpass",
+          "用户实际对比发现 Fast Highpass 更好听",
+          "关键洞察：用户并非不喜欢高频细节，而是不喜欢预振铃",
+          "Fast Highpass 完美平衡：20kHz 内平坦频响 + 无预振铃瞬态",
+          "更新所有推荐场景为 Fast Highpass",
+          "添加四种滤波器的详细对比说明"
+        ]
+      },
+      {
+        "version": "1.1",
+        "date": "2024-11-24",
+        "changes": [
+          "根据用户实际听感更新滤波器设置：Slow Lowpass → Slow Highpass",
+          "添加用户听感偏好档案（高频敏感型）",
+          "更新推荐设置，优先使用最小相位滤波器（Highpass）",
+          "记录用户对预振铃敏感、偏好自然柔和高频的特点"
+        ]
+      },
+      {
+        "version": "1.0",
+        "date": "2024-11-24",
+        "changes": [
+          "初始配置创建"
+        ]
+      }
+    ]
   }
 }
 
