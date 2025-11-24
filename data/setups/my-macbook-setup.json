@@ -34,8 +34,7 @@
     "model": "FC5 屏幕版",
     "series": "FC Series",
     "releaseDate": "2023",
-    "
-": "CN",
+    "countryOfOrigin": "CN",
     "manualUrl": "https://guide.hiby.com/docs/products/usb_dac/hiby-fc5-screen/guide",
     
     "description": "便携式 USB 高清无损音频解码器，采用双 CS43198 DAC 芯片",

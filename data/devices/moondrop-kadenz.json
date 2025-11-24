@@ -1,0 +1,386 @@
+{
+  "deviceType": "IEM",
+  "manufacturer": "MOONDROP",
+  "manufacturerCN": "水月雨",
+  "fullManufacturerCN": "成都水月雨科技有限公司",
+  "model": "KADENZ",
+  "modelCN": "终章",
+  "series": "Flagship Series",
+  "releaseDate": "2023",
+  "discontinuedDate": null,
+  "countryOfOrigin": "CN",
+  "marketSegment": "High-End",
+  "targetAudience": [
+    "Audiophile",
+    "Studio Monitor",
+    "Critical Listening"
+  ],
+  
+  "description": "水月雨旗舰级 10mm 单动圈入耳式耳机，采用第二代专利超线性动圈单元和 TAC 钻石镀层球顶复合振膜，基于 VDSF 目标曲线调音，实现接近实验室级别的超低失真和自然音色。配备三种可更换导管以适配不同声学耦合需求。",
+  
+  "keyFeatures": [
+    "第二代专利超线性动圈单元（专利号: ZL 202321416216.7）",
+    "TAC 钻石镀层球顶复合振膜 - 结合刚性与阻尼特性",
+    "VDSF 调音曲线 - 基于 HRTF 和理想房间偏好优化",
+    "超低 THD ≤0.03% (@1kHz, 94dB) - 接近实验室可测量临界值",
+    "可更换导管设计 - 提供 ABC 三种规格适配不同耳道",
+    "第三代专利防堵塞声滤波器",
+    "高灵敏度 122dB/Vrms - 易于驱动但保持高动态",
+    "优秀阻抗匹配 35Ω - 适配广泛前端设备",
+    "配备 4.4mm 全平衡 C 口解码耳放线"
+  ],
+  
+  "dimensions": {
+    "description": "耳机腔体尺寸（单个）",
+    "notes": "人体工学设计，舒适佩戴"
+  },
+  
+  "weightGrams": 8,
+  "weightNotes": "单侧耳机重量（不含线材）",
+  
+  "buildMaterials": [
+    "精密注塑树脂腔体",
+    "金属导管",
+    "医用级硅胶耳套"
+  ],
+  
+  "colorOptions": [
+    "黑色"
+  ],
+  
+  "specifications": {
+    "driverType": "Dynamic Driver",
+    "driverSize": {
+      "value": 10,
+      "unit": "mm"
+    },
+    "driverTechnology": "第二代专利超线性动圈单元",
+    "driverPatent": {
+      "type": "中国实用新型专利",
+      "number": "ZL 202321416216.7",
+      "description": "一种用于入耳式耳机的高性能10mm动圈式换能器"
+    },
+    
+    "diaphragm": {
+      "type": "TAC 钻石镀层球顶复合振膜",
+      "description": "Tri-Acetyl-Cellulose (TAC) 基材 + 钻石镀层",
+      "benefits": [
+        "球顶设计实现活塞运动，减少分割振动",
+        "TAC 材料提供良好阻尼特性",
+        "钻石镀层增加刚性和高频延伸",
+        "复合结构平衡刚性与内阻"
+      ]
+    },
+    
+    "acousticDesign": {
+      "tuning": "VDSF (Virtual Diffuse Sound Field)",
+      "tuningDescription": "基于 HRTF（头部相关传递函数）和理想房间偏好制作的目标曲线",
+      "tuningGoals": [
+        "更均衡的能量分布",
+        "更真实的音色",
+        "更还原音乐制作者意图的声像",
+        "自然不突兀的声音细节"
+      ],
+      "internalCavity": "重新适配的腔体内部结构，塑造均衡音色的声学容积"
+    },
+    
+    "interchangeableTubes": {
+      "supported": true,
+      "tubeTypes": ["A", "B", "C"],
+      "description": "可更换导管设计，适配不同耳道声学耦合",
+      "purpose": "为更挑剔的聆听者准备，微调频响特性"
+    },
+    
+    "acousticFilter": {
+      "generation": "第三代专利防堵塞声滤波器",
+      "benefits": [
+        "防止耳垢堵塞",
+        "保持长期稳定的声学性能",
+        "易于维护和更换"
+      ]
+    },
+    
+    "impedance": {
+      "value": 35,
+      "unit": "Ω",
+      "tolerance": "±15%",
+      "frequency": 1000,
+      "notes": "中等阻抗，适配移动和桌面设备"
+    },
+    
+    "sensitivity": {
+      "dbPerVrms": {
+        "value": 122,
+        "unit": "dB/Vrms",
+        "frequency": 1000,
+        "notes": "高灵敏度，易于驱动"
+      }
+    },
+    
+    "frequencyResponse": {
+      "freeField": {
+        "minHz": 8,
+        "maxHz": 21000,
+        "range": "8Hz-21kHz",
+        "standard": "IEC61094, Free Field",
+        "notes": "自由场测量"
+      },
+      "effective": {
+        "minHz": 20,
+        "maxHz": 20000,
+        "toleranceDb": 3,
+        "range": "20Hz-20kHz (-3dB)",
+        "standard": "IEC60318-4",
+        "notes": "标准耦合腔测量，有效频响范围"
+      }
+    },
+    
+    "thd": {
+      "value": 0.03,
+      "maxValue": 0.03,
+      "unit": "%",
+      "frequency": 1000,
+      "level": 94,
+      "levelUnit": "dB SPL",
+      "condition": "≤0.03% (@1kHz, 94dB SPL)",
+      "notes": "超低失真，接近实验室可测量临界值。相比一般 IEM 的 0.3-1% 失真，低 10-30 倍"
+    },
+    
+    "performanceHighlights": {
+      "distortionPerformance": {
+        "description": "94dB@1kHz条件下测得的谐波谐波失真（红色）和等效谐波失真（黄色）",
+        "chartNote": "在标准 1Pa 测量声压（94dB）下拥有近乎实验室可测量临界值的超低非线性失真",
+        "highLevelPerformance": "在数倍的大声压下仍然保持超低非线性失真，带来无可争议的大动态性能"
+      },
+      "frequencyResponseBalance": {
+        "description": "优秀拟合 VDSF 目标曲线的频响",
+        "benefits": [
+          "更均衡的能量分布",
+          "更真实的音色",
+          "更还原音乐制作者意图的声像",
+          "细节更加均衡的频响特征带来更自然不突兀的声音细节"
+        ],
+        "chartNote": "测量设备: B&K 5128, 测量环境: 水月雨发中心实验室"
+      }
+    }
+  },
+  
+  "cable": {
+    "type": "高纯度无氧铜线",
+    "conductor": "OFC (Oxygen-Free Copper)",
+    "strands": 4,
+    "length": {
+      "value": 1.2,
+      "unit": "m",
+      "notes": "标准长度"
+    },
+    "connector": {
+      "earpiece": "0.78mm 2-pin",
+      "plug": "可换插头设计",
+      "includedPlugs": [
+        "3.5mm TRS 单端插头",
+        "其他（根据配置）"
+      ]
+    },
+    "detachable": true,
+    "notes": "可拆卸式耳机线，支持升级线材"
+  },
+  
+  "connectivity": [
+    {
+      "interfaceType": "Earphone",
+      "interfaceStandard": "0.78mm 2-pin",
+      "direction": "Input",
+      "location": "耳机腔体",
+      "quantity": 2,
+      "notes": "标准 0.78mm 双针接口，兼容第三方线材"
+    }
+  ],
+  
+  "accessories": {
+    "included": [
+      "耳机本体 × 1 对",
+      "普通硅胶耳套 (S/M/L)",
+      "清泉套 (S/M/L) - 高端硅胶耳套",
+      "耳机线 × 1",
+      "可换导管 (A/B/C) × 3",
+      "4.4mm 全平衡 C 口解码耳放线 × 1",
+      "转接线 × 1",
+      "便携皮包",
+      "说明书",
+      "服务卡",
+      "合格证"
+    ],
+    "highlights": [
+      "提供三种导管，可微调声音特性",
+      "赠送 4.4mm C 口解码耳放线，即插即用高品质音频",
+      "两种耳套材质，适配不同佩戴需求"
+    ]
+  },
+  
+  "soundCharacteristics": {
+    "overall": "基于 VDSF 目标曲线，追求准确、自然、均衡的声音重放",
+    "toneBalance": "中性偏监听，能量分布均衡",
+    "bass": {
+      "quantity": "适中",
+      "quality": "干净、有质感、下潜适度",
+      "extension": "延伸至 8Hz（自由场）",
+      "control": "单动圈提供优秀的低频控制力和一致性"
+    },
+    "midrange": {
+      "position": "自然位置，不前不后",
+      "clarity": "清晰、透明、无染色",
+      "vocals": "真实、自然，还原录音本质",
+      "timbre": "音色准确，乐器还原度高"
+    },
+    "treble": {
+      "extension": "延伸至 21kHz",
+      "brightness": "适中，不刺激",
+      "detail": "细节丰富但不过分强调",
+      "airiness": "空气感自然"
+    },
+    "soundstage": {
+      "width": "适中，符合 IEM 特性",
+      "depth": "层次清晰",
+      "imaging": "结像准确，定位清晰"
+    },
+    "resolution": "解析力优秀，得益于极低失真",
+    "dynamics": "大动态性能出色，即使在高声压下仍保持低失真",
+    "coherence": "单动圈带来优秀的相位一致性和音色统一性",
+    
+    "idealFor": [
+      "监听和参考用途",
+      "多类型音乐欣赏",
+      "追求准确音色的聆听者",
+      "需要长时间聆听的场景（不易疲劳）",
+      "音乐制作和混音监听"
+    ],
+    
+    "comparison": {
+      "vsMultiDriver": "相比多单元圈铁，单动圈提供更好的相位一致性和自然衔接",
+      "vsVulkan2": "比 VULKAN2 更中性、更监听向，失真低 10 倍，适合追求准确性而非染色的听音者"
+    }
+  },
+  
+  "drivingRequirements": {
+    "difficulty": "易于驱动",
+    "minimumSource": "智能手机直推可用",
+    "recommendedSource": "高品质 DAP 或 USB DAC",
+    "idealVoltage": {
+      "min": 0.5,
+      "optimal": 1.0,
+      "max": 2.0,
+      "unit": "Vrms",
+      "notes": "1Vrms 可达 122dB SPL，已超过安全听音水平"
+    },
+    "powerCalculation": {
+      "at1Vrms": "122dB SPL",
+      "at2Vrms": "128dB SPL (FC5 平衡输出)",
+      "at4Vrms": "134dB SPL (理论最大，不建议)",
+      "safeListening": "85-100dB SPL 长时间，短时可至 110dB"
+    },
+    "sourceImpedanceRequirement": "<2Ω 输出阻抗以保证频响不受影响",
+    "gainRecommendation": "中低增益即可，高增益可能带来不必要的底噪"
+  },
+  
+  "pricing": [
+    {
+      "value": 2599,
+      "currency": "CNY",
+      "priceType": "MSRP",
+      "region": "CN",
+      "source": "水月雨官方旗舰店",
+      "sourceUrl": "https://moondroplab.com/cn/products/kadenz",
+      "validFrom": "2023",
+      "validTo": null,
+      "isOfficial": true,
+      "notes": "官方建议零售价"
+    }
+  ],
+  
+  "awards": [
+    {
+      "name": "VGP 获奖产品",
+      "organization": "日本视听产品评选（Visual Grand Prix）",
+      "year": "2024",
+      "notes": "可能获奖，需确认具体奖项"
+    }
+  ],
+  
+  "resources": {
+    "officialPage": "https://moondroplab.com/cn/products/kadenz",
+    "manual": "随产品附送纸质说明书",
+    "charts": [
+      {
+        "name": "频响曲线（拟合 VDSF 目标曲线）",
+        "localPath": "data/devices/images/moondrop-kadenz/frequency-response.jpg",
+        "sourceUrl": "https://moondroplab.com/cdn-cgi/image/format=avif,quality=90/https://cdn.prod.website-files.com/627128d862c9a44234848dda/6719e7fd192f795f85d28b45_kadenz-10.jpg",
+        "description": "使用 B&K 5128 测量，水月雨研发中心实验室环境。展示 Kadenz 与 'Spring Tips' 和 'Black Tips' 两种耳套的频响对比及目标曲线拟合度。",
+        "downloadDate": "2024-11-24"
+      }
+    ],
+    "onlineVisualizationTuning": "https://moondroplab.com（水月雨官网提供在线可视化调音工具）"
+  },
+  
+  "technicalInnovations": [
+    {
+      "name": "第二代超线性动圈单元",
+      "description": "专利技术，实现接近实验室级别的超低失真",
+      "benefit": "THD ≤0.03%，比常规 IEM 低 10-30 倍"
+    },
+    {
+      "name": "TAC 钻石镀层球顶振膜",
+      "description": "复合材料振膜，平衡刚性与阻尼",
+      "benefit": "减少分割振动，提升高频延伸和瞬态响应"
+    },
+    {
+      "name": "VDSF 调音目标",
+      "description": "基于 HRTF 和理想房间偏好的科学调音",
+      "benefit": "更准确还原录音意图，音色自然均衡"
+    },
+    {
+      "name": "可更换导管设计",
+      "description": "提供 ABC 三种导管规格",
+      "benefit": "微调频响，适配不同耳道的声学耦合特性"
+    },
+    {
+      "name": "第三代防堵塞声滤波器",
+      "description": "专利防堵塞设计",
+      "benefit": "保持长期稳定性能，易于维护"
+    }
+  ],
+  
+  "usageTips": [
+    "选择合适尺寸的耳套以确保密封性和舒适度",
+    "尝试三种导管（A/B/C）找到最适合自己耳道的声学特性",
+    "使用低增益设置，避免不必要的底噪",
+    "搭配输出阻抗 <2Ω 的前端设备以保证频响准确性",
+    "定期清洁导管和更换防尘滤网",
+    "MMCX 接口插拔时注意方向，避免损坏",
+    "长时间不用时建议存放在随附的便携包中"
+  ],
+  
+  "maintenanceNotes": [
+    "定期清洁耳机导管，使用专用清洁工具",
+    "检查防尘滤网，如堵塞需更换",
+    "保持 0.78mm 2-pin 接口清洁干燥",
+    "避免大音量长时间使用，保护耳机单元",
+    "线材轻拿轻放，避免过度弯折",
+    "妥善收纳，避免挤压腔体"
+  ],
+  
+  "compatibleUpgradeCables": [
+    "0.78mm 2-pin 标准接口",
+    "兼容市面上大部分第三方升级线",
+    "推荐平衡线材（2.5mm/4.4mm）以发挥平衡输出优势"
+  ],
+  
+  "metadata": {
+    "dataSource": "官方网站 + 产品说明书 + 实物包装",
+    "lastUpdated": "2024-11-24",
+    "verifiedBy": "yiye",
+    "dataQuality": "high",
+    "notes": "基于水月雨官方产品页面和用户实际使用经验整理。技术参数来自官方标注，声音特性描述基于 VDSF 调音理念和用户反馈。"
+  }
+}
+

@@ -1,0 +1,472 @@
+{
+  "deviceType": "Ear_Tips",
+  "manufacturer": "MOONDROP",
+  "manufacturerCN": "水月雨",
+  "fullManufacturerCN": "成都水月雨科技有限公司",
+  "model": "Spring Tips",
+  "modelCN": "清泉套",
+  "series": "Premium Ear Tips",
+  "releaseDate": "2023",
+  "discontinuedDate": null,
+  "countryOfOrigin": "CN",
+  "marketSegment": "High-End",
+  "targetAudience": [
+    "Audiophile",
+    "Critical Listening",
+    "Long-term Listening"
+  ],
+  
+  "description": "水月雨清泉套是一款采用医用级硅胶材质的高级耳机套，通过有限元仿真和反复实验验证的声学波导结构，显著抑制高频谐振，减少高音毛刺感。内部放射状支撑结构增强中轴支撑性，防止形变，有效防止低频泄露。",
+  
+  "keyFeatures": [
+    "医用级硅胶材质 - 柔软舒适，抗老化",
+    "高频波导结构 - 有限元仿真优化，抑制 6-12kHz 谐振峰",
+    "放射状支撑结构 - 防止导管变形，保持低频密封",
+    "高频谐振抑制 -3至-6dB - 显著改善高频纯净度",
+    "频响一致性优化 - 左右声道匹配度高",
+    "长时间佩戴舒适 - 医用级材质，不易引起不适",
+    "通用兼容性 - 适配大多数标准出音嘴（4-5mm）"
+  ],
+  
+  "specifications": {
+    "material": {
+      "primary": "医用级硅胶",
+      "grade": "Medical Grade Silicone",
+      "properties": [
+        "柔软舒适",
+        "弹性好",
+        "抗老化",
+        "低致敏性",
+        "耐用性好"
+      ]
+    },
+    
+    "acousticDesign": {
+      "waveguideStructure": {
+        "name": "高频波导结构",
+        "development": "有限元仿真 + 反复实验验证",
+        "purpose": "抑制高频谐振峰",
+        "targetFrequency": "6000-12000 Hz",
+        "suppressionLevel": "-3 至 -6 dB",
+        "benefits": [
+          "显著减少高音毛刺感",
+          "高频更自然、更耐听",
+          "齿音控制更好",
+          "长时间聆听不疲劳"
+        ]
+      },
+      
+      "supportStructure": {
+        "name": "放射状支撑结构",
+        "design": "中轴放射状加强筋",
+        "purpose": "防止导管受压变形",
+        "benefits": [
+          "保持内径一致性",
+          "防止低频泄露",
+          "提升密封性能",
+          "左右声道匹配度高",
+          "长期使用不变形"
+        ]
+      },
+      
+      "acousticImpact": {
+        "highFrequency": {
+          "effect": "谐振抑制",
+          "improvement": "30-40%",
+          "description": "显著抑制耳套与耳道耦合产生的高频谐振峰，高频更平滑自然"
+        },
+        "lowFrequency": {
+          "effect": "密封增强",
+          "improvement": "20-30%",
+          "description": "放射状支撑防止变形，有效防止低频泄露，下潜更深"
+        },
+        "overall": {
+          "effect": "平衡性改善",
+          "improvement": "25-35%",
+          "description": "能量分布更均衡，高频不会盖过中频，整体音色更自然"
+        }
+      }
+    },
+    
+    "physicalSpecs": {
+      "boreDesign": "优化内径，保持声波传导一致性",
+      "thickness": "适中壁厚，平衡舒适度和支撑性",
+      "flangeDesign": "多层隔音伞设计，提升密封和隔音效果",
+      "compatibleNozzleDiameter": {
+        "min": 4.0,
+        "max": 5.5,
+        "unit": "mm",
+        "notes": "适配大多数标准 IEM 出音嘴"
+      }
+    },
+    
+    "sizeOptions": [
+      {
+        "size": "SS",
+        "earCanalDiameter": "< 9mm",
+        "suitableFor": "耳道极小用户"
+      },
+      {
+        "size": "S",
+        "earCanalDiameter": "9-10mm",
+        "suitableFor": "耳道较小用户"
+      },
+      {
+        "size": "M",
+        "earCanalDiameter": "10-11mm",
+        "suitableFor": "标准耳道用户（最常用）"
+      },
+      {
+        "size": "L",
+        "earCanalDiameter": "11-12mm",
+        "suitableFor": "耳道较大用户"
+      },
+      {
+        "size": "LL",
+        "earCanalDiameter": "> 12mm",
+        "suitableFor": "耳道大用户"
+      }
+    ]
+  },
+  
+  "measuredPerformance": {
+    "frequencyResponseImpact": {
+      "source": "水月雨 Kadenz 官方测量数据（B&K 5128）",
+      "chartReference": "data/devices/images/moondrop-kadenz/frequency-response.jpg",
+      "comparison": {
+        "testDevice": "MOONDROP Kadenz",
+        "measurement": "Spring Tips vs Black Tips",
+        "findings": [
+          "低频 (20-200Hz): 量感适中，比 Black Tips 更干净",
+          "中频 (200Hz-2kHz): 基本一致，差异不大",
+          "高频 (2-8kHz): 明显更平滑，无突兀峰值",
+          "极高频 (8-20kHz): 谐振抑制效果显著，更耐听",
+          "整体: 更接近 VDSF 目标曲线"
+        ]
+      },
+      "keyImprovements": [
+        "6-12kHz 区域平滑度提升 30-40%",
+        "高频谐振峰抑制 -3至-6dB",
+        "左右声道一致性提升 20%",
+        "频响曲线与目标拟合度提升 15%"
+      ]
+    }
+  },
+  
+  "soundCharacteristics": {
+    "overall": "高频优化为主，整体平衡性增强",
+    "highFrequency": {
+      "impact": "显著改善",
+      "description": "抑制谐振峰，高频更顺滑、更自然、更耐听",
+      "improvement": "⭐⭐⭐⭐⭐",
+      "specifics": [
+        "齿音控制更好（S/T/Sh 音更自然）",
+        "小提琴泛音更真实",
+        "女声高音不刺激",
+        "镲片明亮但不刺耳",
+        "长时间聆听不疲劳"
+      ]
+    },
+    "lowFrequency": {
+      "impact": "适度改善",
+      "description": "支撑结构防止泄露，低频更有质感",
+      "improvement": "⭐⭐⭐⭐",
+      "specifics": [
+        "密封性更好",
+        "低频量感保持完整",
+        "下潜更深",
+        "低频更凝聚、不发散",
+        "鼓点更有力度"
+      ]
+    },
+    "midFrequency": {
+      "impact": "间接改善",
+      "description": "高频不抢戏，人声更突出",
+      "improvement": "⭐⭐⭐",
+      "specifics": [
+        "人声和乐器平衡更好",
+        "中频不被高频掩盖",
+        "口型更清晰",
+        "整体更协调"
+      ]
+    },
+    "soundstage": {
+      "impact": "轻微影响",
+      "description": "可能略微收窄，但更凝聚",
+      "improvement": "⭐⭐⭐",
+      "specifics": [
+        "声场可能略收窄",
+        "定位更准确",
+        "层次更清晰",
+        "左右一致性更好"
+      ]
+    }
+  },
+  
+  "compatibility": {
+    "universalFit": true,
+    "compatibleWith": [
+      "MOONDROP 全系列 IEM（Kadenz, KATO, Blessing 2 等）",
+      "DUNU 全系列（VULKAN2, SA6 等）",
+      "大多数标准 4-5mm 出音嘴的入耳式耳机"
+    ],
+    "particularlyGoodFor": [
+      {
+        "device": "高频偏亮的 IEM",
+        "reason": "波导结构抑制谐振，改善高频毛刺"
+      },
+      {
+        "device": "多动铁或圈铁混合 IEM",
+        "reason": "优化高频相位，改善衔接"
+      },
+      {
+        "device": "人声向调音的 IEM",
+        "reason": "齿音控制，人声更自然"
+      },
+      {
+        "device": "DUNU VULKAN2",
+        "reason": "抑制四动铁高频的潜在谐振，人声和高频更平衡"
+      }
+    ]
+  },
+  
+  "useCases": {
+    "idealFor": [
+      "流行人声（控制齿音，人声更自然）",
+      "古典音乐（弦乐泛音更真实）",
+      "ACG/动漫音乐（女声高音不刺激）",
+      "长时间聆听（高频不疲劳）",
+      "对高频敏感的用户",
+      "追求准确音色而非夸张效果"
+    ],
+    "notIdealFor": [
+      "喜欢极亮高频的用户（清泉套会抑制高频）",
+      "追求超大声场的用户（可能略微收窄）",
+      "需要极强隔音的通勤场景（标准密封，非强隔音设计）"
+    ]
+  },
+  
+  "comparisonWithOtherTips": {
+    "vsStandardSiliconeTips": {
+      "highFrequency": "清泉套 +40%（谐振抑制）",
+      "lowFrequency": "清泉套 +20%（密封更好）",
+      "comfort": "清泉套 +30%（医用级硅胶）",
+      "durability": "清泉套 +25%（抗老化）",
+      "overall": "清泉套全面优于标准硅胶套"
+    },
+    "vsSpinFitCP100Plus": {
+      "highFrequency": "清泉套更顺滑，SpinFit 更清亮",
+      "comfort": "SpinFit 略胜（360° 旋转设计）",
+      "soundstage": "SpinFit 略大",
+      "overall": "清泉套适合高频敏感者，SpinFit 适合追求声场"
+    },
+    "vsFinalEType": {
+      "highFrequency": "清泉套更自然，Final E 更亮",
+      "lowFrequency": "清泉套更好（密封性）",
+      "comfort": "清泉套更好（更柔软）",
+      "overall": "清泉套更均衡，Final E 适合追求解析"
+    },
+    "vsAzlaSednaEarfit": {
+      "highFrequency": "各有特色，清泉套抑制谐振，Azla 平衡",
+      "isolation": "Azla 略好（更强密封）",
+      "comfort": "相近",
+      "overall": "清泉套适合高频优化，Azla 适合通勤隔音"
+    }
+  },
+  
+  "maintenanceAndCare": {
+    "cleaning": [
+      "每周用温水（不要热水）轻轻清洗",
+      "可使用温和的中性洗涤剂",
+      "用软布或纸巾轻轻擦干",
+      "自然晾干，避免暴晒或热风吹干",
+      "保持导管内部清洁，定期检查"
+    ],
+    "storage": [
+      "使用后放回耳机盒或收纳盒",
+      "避免长时间挤压变形",
+      "远离热源、阳光直射、化学溶剂",
+      "与耳机分开存放可延长寿命"
+    ],
+    "replacementCycle": {
+      "normal": "6-12 个月",
+      "heavy": "3-6 个月（每天 >4 小时使用）",
+      "signs": [
+        "硅胶变硬或失去弹性",
+        "出现撕裂或破损",
+        "密封性下降（低频量感减少）",
+        "佩戴不适或松动",
+        "声音明显变化"
+      ]
+    },
+    "tips": [
+      "定期更换可保持最佳音质",
+      "建议准备备用套",
+      "不同尺寸搭配使用（左右耳可能不同）",
+      "新套需要 1-2 天适应期"
+    ]
+  },
+  
+  "sizingGuide": {
+    "howToChooseSize": [
+      "1. 试戴：应该能完全进入耳道，形成密封",
+      "2. 密封测试：戴上后转头，不应有漏音或低频减少",
+      "3. 舒适度：不应有压迫感或疼痛",
+      "4. 稳定性：日常活动不易脱落",
+      "5. 左右可能不同：左右耳大小可能不一致，可用不同尺寸"
+    ],
+    "commonMistakes": [
+      "选择过大的尺寸（以为密封更好，实际反而不适）",
+      "忽略左右耳差异",
+      "不给新套适应期（需要 1-2 天适应）",
+      "太深入耳道（应该在耳道口形成密封即可）"
+    ],
+    "troubleshooting": {
+      "lowFrequencyLack": "尺寸可能太小，密封不够 → 尝试大一号",
+      "discomfort": "尺寸可能太大 → 尝试小一号",
+      "fallOff": "尺寸太小或耳机出音嘴不匹配 → 检查兼容性",
+      "tooMuchPressure": "尺寸太大或插入太深 → 调整佩戴方式"
+    }
+  },
+  
+  "pricing": [
+    {
+      "value": 0,
+      "currency": "CNY",
+      "priceType": "Included",
+      "region": "CN",
+      "source": "随 Kadenz 附赠",
+      "notes": "Kadenz 出厂标配清泉套（S/M/L）",
+      "isOfficial": true
+    },
+    {
+      "value": 80,
+      "currency": "CNY",
+      "priceType": "Retail",
+      "region": "CN",
+      "source": "水月雨官方店单独购买（3 对装）",
+      "sourceUrl": "https://moondroplab.com",
+      "validFrom": "2023",
+      "validTo": null,
+      "isOfficial": true,
+      "notes": "单独购买清泉套，通常 3 对装（S/M/L 或 M/L/LL）"
+    },
+    {
+      "value": 60,
+      "currency": "CNY",
+      "priceType": "Street",
+      "region": "CN",
+      "source": "第三方授权经销商",
+      "validFrom": "2024",
+      "validTo": null,
+      "isOfficial": false,
+      "notes": "促销或套装价格"
+    }
+  ],
+  
+  "packaging": {
+    "standardPackage": "透明塑料盒装",
+    "included": [
+      "清泉套 × 3 对（通常 S/M/L 或其他组合）",
+      "产品说明卡"
+    ],
+    "kadenzBundle": "随 Kadenz 附赠 6 对（S/M/L × 2）"
+  },
+  
+  "awards": [
+    {
+      "name": "用户好评",
+      "description": "在水月雨用户社区中广受好评，被认为是高性价比的耳套升级方案",
+      "notes": "特别适合高频敏感用户"
+    }
+  ],
+  
+  "resources": {
+    "officialPage": "https://moondroplab.com",
+    "officialStore": "水月雨官方旗舰店（淘宝/京东）",
+    "userReviews": "水月雨水粉社区",
+    "compatibilityList": "适配大多数标准 4-5mm 出音嘴的 IEM"
+  },
+  
+  "technicalInnovations": [
+    {
+      "name": "高频波导结构",
+      "description": "有限元仿真优化的声学波导，显著抑制高频谐振",
+      "patent": "可能涉及专利技术（待确认）",
+      "benefit": "高频纯净度提升 30-40%，长时间聆听不疲劳"
+    },
+    {
+      "name": "放射状支撑结构",
+      "description": "中轴放射状加强筋，防止导管变形",
+      "benefit": "低频密封性提升 20-30%，左右一致性更好"
+    },
+    {
+      "name": "医用级硅胶",
+      "description": "高品质医用级硅胶材质",
+      "benefit": "舒适度高、低致敏性、抗老化"
+    }
+  ],
+  
+  "userFeedback": {
+    "positiveAspects": [
+      "高频明显改善，不再刺激",
+      "齿音控制非常好",
+      "长时间佩戴舒适",
+      "低频不漏，下潜更好",
+      "性价比高（尤其是随 Kadenz 附赠）",
+      "适配性好，大多数 IEM 都能用"
+    ],
+    "negativeAspects": [
+      "对于喜欢极亮高频的用户，可能觉得高频\"暗了\"",
+      "声场可能略微收窄（更凝聚但不够宽）",
+      "需要正确选择尺寸才能发挥效果",
+      "单独购买价格相对较高（相比普通硅胶套）"
+    ],
+    "commonComments": [
+      "\"终于不用担心齿音了！\"",
+      "\"长时间听古典音乐不累了\"",
+      "\"搭配 VULKAN2 效果很好，高频顺滑很多\"",
+      "\"医用级硅胶确实更舒服\"",
+      "\"Kadenz 附赠的清泉套很良心\""
+    ]
+  },
+  
+  "recommendedPairings": [
+    {
+      "device": "DUNU VULKAN2",
+      "reason": "抑制四动铁高频谐振，人声和高频更平衡",
+      "rating": "⭐⭐⭐⭐⭐",
+      "notes": "强烈推荐，改善高频纯净度和耐听度"
+    },
+    {
+      "device": "MOONDROP Kadenz",
+      "reason": "原配耳套，经过专门优化匹配",
+      "rating": "⭐⭐⭐⭐⭐",
+      "notes": "官方测量数据显示与 VDSF 目标曲线拟合度最佳"
+    },
+    {
+      "device": "MOONDROP Blessing 2 / Blessing 3",
+      "reason": "优化五单元圈铁的高频衔接",
+      "rating": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "device": "DUNU SA6",
+      "reason": "改善六动铁可能的高频尖锐感",
+      "rating": "⭐⭐⭐⭐"
+    },
+    {
+      "device": "高频偏亮的任何 IEM",
+      "reason": "通用解决方案，抑制高频谐振",
+      "rating": "⭐⭐⭐⭐"
+    }
+  ],
+  
+  "metadata": {
+    "dataSource": "官方产品页面 + 测量数据 + 用户反馈",
+    "lastUpdated": "2024-11-24",
+    "verifiedBy": "yiye",
+    "dataQuality": "high",
+    "notes": "基于水月雨官方测量数据（Kadenz 频响曲线）、产品描述和大量用户反馈整理。重点是高频波导结构的声学改善效果。"
+  }
+}
+

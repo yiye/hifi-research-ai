@@ -27,16 +27,13 @@
 - **AGENTS.md**: 项目级核心规则，包含音频专业术语、编码规范、文档标准
 
 ### 专项规则 (.cursor/rules/)
-- **audio-device-validation.mdc**: 音频设备数据验证和格式规范
-- **measurement-data.mdc**: 音频测量数据处理和分析标准
-- **review-template.mdc**: 设备评测文章模板和写作规范
-- **database-schema.mdc**: 数据库设计规范
+- **hifi-expert-persona.mdc**: Hi-Fi 音频专家 Agent 人设配置，定义专业回答风格和知识体系
 
 这些规则确保：
 - ✅ 使用标准化的音频术语和单位
 - ✅ 遵循音频工程测量标准（AES、IEC）
 - ✅ 保持数据结构的一致性
-- ✅ 生成专业、全面的评测内容
+- ✅ 提供专业、客观的技术建议
 
 ## 技术栈
 
@@ -66,29 +63,33 @@
 hifi-research/
 ├── AGENTS.md                 # AI Agent 主规则
 ├── .cursor/rules/            # 专项规则
-│   ├── audio-device-validation.mdc
-│   ├── measurement-data.mdc
-│   ├── review-template.mdc
-│   └── database-schema.mdc
-├── backend/                  # 后端代码
+│   ├── hifi-expert-persona.mdc  # Hi-Fi 专家 Agent 人设
+│   └── README.md             # 规则使用说明
+├── data/                     # 数据文件
+│   ├── devices/              # 设备数据 (JSON)
+│   │   ├── images/           # 设备图片和测量曲线
+│   │   ├── moondrop-kadenz.json        # 水月雨终章 IEM
+│   │   ├── moondrop-spring-tips.json   # 水月雨清泉套耳塞套
+│   │   └── template.json     # 设备数据模板
+│   └── setups/               # 个人音频系统配置
+│       ├── my-macbook-setup.json       # MacBook 音频配置
+│       ├── quick-reference.md          # 快速参考指南
+│       └── README.md         # 配置说明
+├── backend/                  # 后端代码（计划中）
 │   ├── api/                  # API 接口
 │   ├── database/             # 数据库模型与迁移
 │   ├── services/             # 业务逻辑
 │   └── utils/                # 工具函数
-├── frontend/                 # 前端代码
+├── frontend/                 # 前端代码（计划中）
 │   ├── components/           # React 组件
 │   ├── pages/                # 页面
 │   ├── hooks/                # 自定义 Hooks
 │   └── utils/                # 工具函数
-├── data/                     # 数据文件
-│   ├── devices/              # 设备数据 (JSON)
-│   ├── measurements/         # 测量数据
-│   └── reviews/              # 评测文章
-├── scripts/                  # 脚本工具
+├── scripts/                  # 脚本工具（计划中）
 │   ├── data-import/          # 数据导入
 │   ├── validation/           # 数据验证
 │   └── analysis/             # 数据分析
-└── docs/                     # 文档
+└── docs/                     # 文档（计划中）
     ├── api/                  # API 文档
     ├── standards/            # 标准与规范
     └── guides/               # 使用指南
@@ -147,7 +148,7 @@ npm run dev
 3. 包含测量曲线图片
 
 ### 撰写评测
-1. 使用评测模板（参考 `.cursor/rules/review-template.mdc`）
+1. 遵循专业的评测标准和写作规范
 2. 包含主观和客观两部分
 3. 保持中立、客观的态度
 
