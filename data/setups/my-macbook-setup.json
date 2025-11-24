@@ -1,0 +1,486 @@
+{
+  "setupName": "MacBook Pro M4 Pro + HiBy FC5 + VULKAN2 配置",
+  "createdDate": "2024-11-24",
+  "lastUpdated": "2024-11-24",
+  "owner": "yiye",
+  "description": "MacBook Pro M4 Pro 通过 HiBy FC5 USB 解码器驱动达音科 VULKAN2 耳机的播放系统",
+  
+  "source": {
+    "deviceType": "Computer",
+    "manufacturer": "Apple",
+    "model": "MacBook Pro",
+    "processor": "Apple M4 Pro",
+    "year": 2024,
+    "operatingSystem": "macOS",
+    "playerSoftware": {
+      "name": "网易云音乐",
+      "nameEn": "NetEase Cloud Music",
+      "version": "最新版本",
+      "audioOutput": "USB Audio"
+    },
+    "audioOutput": {
+      "interface": "USB Type-C",
+      "protocol": "USB Audio Class 2.0",
+      "maxSampleRate": 192000,
+      "maxBitDepth": 24,
+      "notes": "macOS 原生支持 UAC2.0，无需驱动"
+    }
+  },
+  
+  "dac": {
+    "deviceType": "USB_DAC",
+    "manufacturer": "HiBy",
+    "manufacturerCN": "海贝音乐",
+    "model": "FC5 屏幕版",
+    "series": "FC Series",
+    "releaseDate": "2023",
+    "
+": "CN",
+    "manualUrl": "https://guide.hiby.com/docs/products/usb_dac/hiby-fc5-screen/guide",
+    
+    "description": "便携式 USB 高清无损音频解码器，采用双 CS43198 DAC 芯片",
+    
+    "specifications": {
+      "dacChip": "Dual Cirrus Logic CS43198",
+      "dacArchitecture": "Delta-Sigma",
+      "usbAudioSystem": "HiBy 自研 USB 音频系统",
+      
+      "maxPcmSampleRate": 768000,
+      "maxPcmBitDepth": 32,
+      "maxDsdRate": 22579200,
+      "supportedFormats": [
+        "PCM up to 768kHz/32bit",
+        "DSD up to DSD512",
+        "MQA"
+      ],
+      
+      "outputVoltagePO": {
+        "value": 2.0,
+        "unit": "Vrms",
+        "interface": "3.5mm SE",
+        "condition": "0dBFS"
+      },
+      "outputVoltageBAL": {
+        "value": 4.0,
+        "unit": "Vrms",
+        "interface": "4.4mm BAL",
+        "condition": "0dBFS"
+      },
+      
+      "outputPower": [
+        {
+          "powerMw": 190,
+          "loadOhm": 32,
+          "interface": "3.5mm SE",
+          "notes": "估算值"
+        },
+        {
+          "powerMw": 380,
+          "loadOhm": 32,
+          "interface": "4.4mm BAL",
+          "notes": "估算值"
+        }
+      ],
+      
+      "thd": {
+        "value": 0.0005,
+        "unit": "%",
+        "notes": "THD+N < 0.0005% (典型值)"
+      },
+      
+      "snr": {
+        "value": 130,
+        "unit": "dB",
+        "notes": "估算值，基于 CS43198 芯片性能"
+      },
+      
+      "outputImpedancePO": {
+        "value": 1,
+        "unit": "Ω",
+        "notes": "估算值"
+      },
+      "outputImpedanceBAL": {
+        "value": 2,
+        "unit": "Ω",
+        "notes": "估算值"
+      },
+      
+      "frequencyResponse": {
+        "minHz": 20,
+        "maxHz": 40000,
+        "range": "20Hz-40kHz"
+      }
+    },
+    
+    "connectivity": {
+      "input": {
+        "interface": "USB Type-C",
+        "usbClass": "UAC2.0",
+        "location": "顶部"
+      },
+      "outputs": [
+        {
+          "interface": "3.5mm TRS",
+          "type": "Single-Ended (PO)",
+          "location": "底部左侧"
+        },
+        {
+          "interface": "4.4mm TRRRS",
+          "type": "Balanced (BAL)",
+          "location": "底部右侧"
+        }
+      ]
+    },
+    
+    "settings": {
+      "gain": {
+        "description": "增益设置",
+        "options": ["High", "Middle", "Low"],
+        "currentSetting": "Low",
+        "notes": "根据耳机灵敏度选择，VULKAN2 灵敏度高（113dB/mW），建议使用 Low 增益"
+      },
+      
+      "filter": {
+        "description": "数字滤波器设置",
+        "descriptionCN": "FLTR",
+        "options": [
+          "Fast Highpass",
+          "Fast Lowpass",
+          "Slow Lowpass",
+          "Slow Highpass"
+        ],
+        "currentSetting": "Slow Lowpass",
+        "notes": "Slow Lowpass 通常提供更自然的声音，减少高频相位失真"
+      },
+      
+      "eq": {
+        "description": "均衡器预设",
+        "options": [
+          "OFF",
+          "Vocal",
+          "Bass",
+          "Treble",
+          "Pop",
+          "Classical",
+          "Dynamic",
+          "Jazz",
+          "R&B",
+          "Metal"
+        ],
+        "currentSetting": "Vocal",
+        "notes": "VULKAN2 针对流行人声优化，可使用 Vocal 预设或 OFF（原声）",
+        "customPEQ": {
+          "supported": true,
+          "tools": ["HiByUSBMaster (Windows/Mac)", "HiByMusic App (Android)"],
+          "configured": false
+        }
+      }
+    },
+    
+    "features": [
+      "0.96英寸 OLED 屏幕显示采样率、格式、音量",
+      "实时显示 PCM/DSD/MQA 格式",
+      "硬件音量控制",
+      "九种预置 EQ + 自定义 PEQ",
+      "独立极低频动圈单元支持"
+    ],
+    
+    "dimensions": {
+      "length": 62,
+      "width": 26,
+      "height": 13,
+      "unit": "mm",
+      "notes": "便携尺寸"
+    },
+    
+    "weight": {
+      "value": 28,
+      "unit": "g"
+    }
+  },
+  
+  "transducer": {
+    "deviceType": "IEM",
+    "manufacturer": "DUNU",
+    "manufacturerCN": "达音科",
+    "fullManufacturerCN": "东莞达音电子有限公司",
+    "model": "VULKAN 2",
+    "modelCN": "曜",
+    "series": "VULKAN",
+    
+    "description": "八单元圈铁混合入耳式监听耳机（双动圈六动铁），针对流行人声优化",
+    
+    "specifications": {
+      "driverConfiguration": {
+        "total": 8,
+        "dynamicDrivers": 2,
+        "balancedArmatures": 6,
+        "description": "双动圈六动铁八单元混合架构",
+        "detail": {
+          "subBass": "独立极低频动圈 × 1",
+          "bass": "独立低频动圈 × 1",
+          "midrange": "定制楼氏中频动铁 × 2",
+          "treble": "定制高频极高频动铁 × 4"
+        }
+      },
+      
+      "frequencyResponse": {
+        "minHz": 5,
+        "maxHz": 40000,
+        "range": "5Hz-40kHz",
+        "description": "超宽频响范围，覆盖人耳可听范围及超高频",
+        "signature": "饱满温润且细腻耐听的调音，搭配两圈六铁八单元的强悍素质基底",
+        "characteristics": [
+          "高密度",
+          "大声场",
+          "人声饱满靠前",
+          "层次清晰"
+        ],
+        "suitableGenres": [
+          "流行",
+          "人声",
+          "摇滚",
+          "J-POP",
+          "ACG"
+        ]
+      },
+      
+      "impedance": {
+        "value": 35,
+        "unit": "Ω",
+        "notes": "中等阻抗，易于驱动"
+      },
+      
+      "sensitivity": {
+        "dbPerMw": {
+          "value": 113,
+          "unit": "dB/mW",
+          "frequency": 1000,
+          "notes": "高灵敏度，容易驱动"
+        },
+        "dbPerVrms": {
+          "value": 128,
+          "unit": "dB/Vrms",
+          "frequency": 1000
+        }
+      },
+      
+      "thd": {
+        "value": 0.3,
+        "unit": "%",
+        "frequency": 1000,
+        "condition": "< 0.3% (@1kHz)"
+      },
+      
+      "bodyMaterial": "航空级铝合金",
+      "weight": {
+        "value": 8,
+        "unit": "g",
+        "perSide": true
+      }
+    },
+    
+    "cable": {
+      "type": "4股高纯度单晶铜镀银线",
+      "structure": "Litz 结构",
+      "length": {
+        "value": 1.2,
+        "tolerance": 0.1,
+        "unit": "m"
+      },
+      "connector": {
+        "earpiece": "专利膨胀式 MMCX 插针",
+        "plug": "Q-Lock Mini 可换插头设计",
+        "includedPlugs": [
+          "4.4mm 平衡插头",
+          "3.5mm 单端插头"
+        ]
+      }
+    },
+    
+    "currentConnection": {
+      "plugType": "4.4mm Balanced",
+      "dacOutput": "BAL (4.4mm)",
+      "notes": "使用平衡接口获得更好的分离度和动态"
+    }
+  },
+  
+  "signalChain": {
+    "description": "完整音频信号链路",
+    "chain": [
+      {
+        "stage": 1,
+        "component": "MacBook Pro M4 Pro",
+        "role": "音频源 (Audio Source)",
+        "output": "数字音频信号 via USB Type-C"
+      },
+      {
+        "stage": 2,
+        "component": "HiBy FC5",
+        "role": "USB DAC + 耳机放大器",
+        "process": [
+          "USB 音频接收 (UAC2.0)",
+          "数字滤波 (Digital Filter)",
+          "数模转换 (Dual CS43198 DAC)",
+          "模拟放大 (Analog Amplification)",
+          "均衡处理 (EQ Processing)"
+        ],
+        "output": "模拟音频信号 via 4.4mm Balanced"
+      },
+      {
+        "stage": 3,
+        "component": "4股单晶铜镀银线",
+        "role": "信号传输",
+        "length": "1.2m"
+      },
+      {
+        "stage": 4,
+        "component": "VULKAN 2",
+        "role": "电声转换 (Transducer)",
+        "process": [
+          "极低频动圈",
+          "低频动圈",
+          "中频动铁 × 2",
+          "高频动铁 × 4"
+        ],
+        "output": "声波 (Sound Waves)"
+      }
+    ]
+  },
+  
+  "powerConsumption": {
+    "source": "USB Bus Power (MacBook Pro)",
+    "dacConsumption": "约 150-200mA @ 5V",
+    "notes": "HiBy FC5 通过 USB 供电，会消耗 MacBook 电量"
+  },
+  
+  "recommendedSettings": {
+    "description": "针对 VULKAN2 的推荐设置",
+    "settings": [
+      {
+        "scenario": "流行人声",
+        "gain": "Low",
+        "filter": "Slow Lowpass",
+        "eq": "Vocal 或 OFF",
+        "volume": "40-60% (根据个人听感)",
+        "reason": "VULKAN2 本身针对流行人声优化，高灵敏度适合低增益"
+      },
+      {
+        "scenario": "古典音乐",
+        "gain": "Middle",
+        "filter": "Slow Lowpass",
+        "eq": "Classical",
+        "volume": "45-65%",
+        "reason": "古典音乐动态范围大，可适当提升增益以保留微动态"
+      },
+      {
+        "scenario": "摇滚/金属",
+        "gain": "Low",
+        "filter": "Fast Lowpass",
+        "eq": "Rock 或 Metal",
+        "volume": "50-70%",
+        "reason": "快速滤波器提供更好的瞬态响应"
+      },
+      {
+        "scenario": "纯净监听",
+        "gain": "Low",
+        "filter": "Slow Lowpass",
+        "eq": "OFF",
+        "volume": "按需调整",
+        "reason": "关闭 EQ，使用原始调音"
+      }
+    ]
+  },
+  
+  "listeningNotes": {
+    "soundSignature": {
+      "overall": "饱满温润、细腻耐听，人声靠前",
+      "bass": "量感充足，下潜深，双动圈提供强悍的低频基础",
+      "midrange": "密度高，人声饱满靠前，定制楼氏动铁保证中频质感",
+      "treble": "层次清晰，高频延伸自然，四单元动铁提供细节和空气感",
+      "soundstage": "大声场",
+      "imaging": "层次清晰"
+    },
+    
+    "pairingNotes": [
+      "HiBy FC5 的 CS43198 DAC 芯片音色中性偏暖，与 VULKAN2 搭配适中",
+      "平衡输出（4.4mm）可提供更好的分离度和声场",
+      "FC5 输出阻抗低（~1-2Ω），能很好控制 35Ω 的 VULKAN2",
+      "高灵敏度（113dB/mW）建议使用低增益，避免底噪",
+      "网易云音乐播放时注意选择无损音质"
+    ],
+    
+    "optimizationTips": [
+      "MacBook Pro 使用时建议关闭系统音效处理",
+      "网易云音乐设置中开启「独占音频输出」（如支持）",
+      "播放无损音乐（FLAC/APE）或高品质流媒体",
+      "FC5 预热 10-15 分钟后音质更稳定",
+      "定期清洁 MMCX 接口和耳机导管",
+      "可尝试使用 HiByMusic 播放器替代网易云，支持更高规格音频"
+    ]
+  },
+  
+  "upgradePath": {
+    "description": "潜在升级路径",
+    "options": [
+      {
+        "component": "播放器",
+        "suggestion": "更换为专业播放软件（如 Audirvana, Roon）",
+        "benefit": "更好的音频处理和比特完美输出"
+      },
+      {
+        "component": "DAC",
+        "suggestion": "升级到台式 DAC/耳放（如 Topping DX9, iFi Pro iDSD）",
+        "benefit": "更强驱动力和更低失真"
+      },
+      {
+        "component": "线材",
+        "suggestion": "升级为高级升级线",
+        "benefit": "理论上可能改善声音（主观因素较大）"
+      },
+      {
+        "component": "耳机",
+        "suggestion": "根据听音偏好扩展耳机库",
+        "benefit": "不同音色风格的体验"
+      }
+    ]
+  },
+  
+  "maintenance": {
+    "dac": [
+      "避免热插拔 USB 连接",
+      "长时间不用建议拔下 USB",
+      "正常使用会有轻微发热",
+      "保持接口清洁干燥"
+    ],
+    "iem": [
+      "定期清洁耳机导管和耳套",
+      "检查 MMCX 接口是否松动",
+      "避免大音量长时间使用",
+      "妥善收纳，避免线材打结"
+    ]
+  },
+  
+  "safetyWarnings": [
+    "首次使用前将音量调至最低",
+    "插拔耳机时不要佩戴，避免瞬间冲击声",
+    "长时间听音乐建议音量不超过 60%",
+    "听音乐时注意保护听力，每小时休息 10-15 分钟",
+    "HiBy FC5 工作时会有一定发热，属于正常现象"
+  ],
+  
+  "references": {
+    "hibyFC5Manual": "https://guide.hiby.com/docs/products/usb_dac/hiby-fc5-screen/guide",
+    "vulkan2Info": "产品包装及官方参数",
+    "frequencyResponseChart": "附图2 - 频响曲线",
+    "productPhotos": "附图1 - 产品参数铭牌"
+  },
+  
+  "metadata": {
+    "configVersion": "1.0",
+    "lastReviewed": "2024-11-24",
+    "dataQuality": "high",
+    "notes": "基于官方规格、产品铭牌和实际使用经验创建"
+  }
+}
+

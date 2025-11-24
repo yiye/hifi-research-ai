@@ -1,0 +1,232 @@
+{
+  "$schema": "../../schemas/device.schema.json",
+  "deviceType": "DAC",
+  "manufacturer": "品牌名称",
+  "model": "型号",
+  "series": "产品系列（可选）",
+  "releaseDate": "2024-01-01",
+  "discontinuedDate": null,
+  "countryOfOrigin": "CN",
+  "marketSegment": "Mid",
+  "targetAudience": [
+    "Audiophile",
+    "Consumer"
+  ],
+  "description": "产品简介，2-3句话概述产品特点和定位",
+  "keyFeatures": [
+    "核心特性1：如旗舰 DAC 芯片 ES9038PRO",
+    "核心特性2：如 THD+N < 0.0005%",
+    "核心特性3：如支持 PCM 768kHz / DSD512"
+  ],
+  "dimensions": {
+    "length": 180,
+    "width": 120,
+    "height": 45,
+    "unit": "mm"
+  },
+  "weightGrams": 650,
+  "buildMaterials": [
+    "铝合金外壳",
+    "玻璃面板"
+  ],
+  "colorOptions": [
+    "银色",
+    "黑色"
+  ],
+  "specifications": {
+    "dacChip": "ESS ES9038PRO",
+    "dacArchitecture": "Delta-Sigma",
+    "maxPcmSampleRate": 768000,
+    "maxPcmBitDepth": 32,
+    "maxDsdRate": 22579200,
+    "supportedFormats": [
+      "PCM",
+      "DSD",
+      "MQA"
+    ],
+    "outputVoltageSe": {
+      "value": 2.0,
+      "unit": "Vrms",
+      "condition": "0dBFS"
+    },
+    "outputVoltageBal": {
+      "value": 4.0,
+      "unit": "Vrms",
+      "condition": "0dBFS"
+    },
+    "outputImpedanceSe": {
+      "value": 0.8,
+      "unit": "Ω"
+    },
+    "outputImpedanceBal": {
+      "value": 2.0,
+      "unit": "Ω"
+    },
+    "outputPower": [
+      {
+        "powerMw": 450,
+        "loadOhm": 32,
+        "thdPercent": 1.0,
+        "interface": "6.35mm"
+      },
+      {
+        "powerMw": 650,
+        "loadOhm": 16,
+        "thdPercent": 1.0,
+        "interface": "6.35mm"
+      },
+      {
+        "powerMw": 55,
+        "loadOhm": 300,
+        "thdPercent": 1.0,
+        "interface": "6.35mm"
+      }
+    ],
+    "thdNMeasurements": [
+      {
+        "value": 0.0005,
+        "unit": "%",
+        "frequency": 1000,
+        "level": -1.0,
+        "levelUnit": "dBFS",
+        "load": 32,
+        "loadUnit": "Ω",
+        "condition": "1kHz, -1dBFS, 32Ω, 低增益"
+      }
+    ],
+    "snr": {
+      "value": 120,
+      "unit": "dB",
+      "weighted": "A-weighted"
+    },
+    "dynamicRange": {
+      "value": 120,
+      "unit": "dB"
+    },
+    "imd": {
+      "value": 0.0005,
+      "unit": "%",
+      "method": "CCIF",
+      "frequencies": [19000, 20000]
+    },
+    "crosstalk": {
+      "value": -110,
+      "unit": "dB",
+      "frequency": 1000
+    },
+    "frequencyResponse": {
+      "minHz": 10,
+      "maxHz": 80000,
+      "toleranceDb": 0.5,
+      "range": "10Hz-80kHz (±0.5dB)"
+    },
+    "clockType": "有源晶振",
+    "jitter": {
+      "value": 8,
+      "unit": "ps"
+    },
+    "powerConsumption": {
+      "idleW": 5,
+      "typicalW": 15,
+      "maxW": 20
+    },
+    "operatingTemp": {
+      "minC": 0,
+      "maxC": 40
+    }
+  },
+  "connectivity": [
+    {
+      "interfaceType": "USB",
+      "interfaceStandard": "USB-C",
+      "direction": "Input",
+      "location": "Back",
+      "quantity": 1,
+      "maxSampleRate": 768000,
+      "usbClass": "UAC2",
+      "notes": "支持 USB Audio Class 2.0，免驱动"
+    },
+    {
+      "interfaceType": "Optical",
+      "interfaceStandard": "TOSLINK",
+      "direction": "Input",
+      "location": "Back",
+      "quantity": 1,
+      "maxSampleRate": 192000,
+      "notes": "最高支持 192kHz/24bit"
+    },
+    {
+      "interfaceType": "Coaxial",
+      "interfaceStandard": "S/PDIF",
+      "direction": "Input",
+      "location": "Back",
+      "quantity": 1,
+      "maxSampleRate": 192000,
+      "notes": "RCA 同轴接口"
+    },
+    {
+      "interfaceType": "Analog_SE",
+      "interfaceStandard": "RCA",
+      "direction": "Output",
+      "location": "Back",
+      "quantity": 2,
+      "notes": "左右声道 RCA 非平衡输出"
+    },
+    {
+      "interfaceType": "Analog_BAL",
+      "interfaceStandard": "XLR",
+      "direction": "Output",
+      "location": "Back",
+      "quantity": 2,
+      "notes": "左右声道 XLR 平衡输出"
+    },
+    {
+      "interfaceType": "Headphone",
+      "interfaceStandard": "6.35mm TRS",
+      "direction": "Output",
+      "location": "Front",
+      "quantity": 1,
+      "notes": "单端耳机输出"
+    },
+    {
+      "interfaceType": "Headphone",
+      "interfaceStandard": "4.4mm TRRRS",
+      "direction": "Output",
+      "location": "Front",
+      "quantity": 1,
+      "notes": "平衡耳机输出"
+    }
+  ],
+  "pricing": [
+    {
+      "value": 3999,
+      "currency": "CNY",
+      "priceType": "MSRP",
+      "region": "CN",
+      "source": "官方旗舰店",
+      "sourceUrl": "https://example.com",
+      "validFrom": "2024-01-01",
+      "validTo": null,
+      "isOfficial": true
+    },
+    {
+      "value": 3599,
+      "currency": "CNY",
+      "priceType": "Street",
+      "region": "CN",
+      "source": "京东自营",
+      "sourceUrl": "https://jd.com/...",
+      "validFrom": "2024-06-01",
+      "validTo": null,
+      "isOfficial": false
+    }
+  ],
+  "metadata": {
+    "dataSource": "官方规格书 + 实测",
+    "lastUpdated": "2024-11-24",
+    "verifiedBy": "reviewer_name",
+    "dataQuality": "high",
+    "notes": "其他备注信息"
+  }
+}
+

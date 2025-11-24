@@ -1,0 +1,572 @@
+---
+description: 音频设备数据库设计规范
+globs:
+  - "**/*schema*.{ts,js,sql}"
+  - "**/*model*.{ts,js}"
+  - "**/database/**/*.{ts,js,sql}"
+  - "**/prisma/**/*.prisma"
+alwaysApply: false
+---
+
+# 音频设备数据库设计规范
+
+## 核心表结构
+
+### 设备主表 (devices)
+
+```sql
+CREATE TABLE devices (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  
+  -- 基本信息
+  device_type VARCHAR(50) NOT NULL,  -- 'DAC', 'Amplifier', 'Headphone', etc.
+  manufacturer VARCHAR(100) NOT NULL,
+  model VARCHAR(200) NOT NULL,
+  series VARCHAR(100),
+  release_date DATE,
+  discontinued_date DATE,
+  country_of_origin VARCHAR(50),
+  
+  -- 定位信息
+  market_segment VARCHAR(50),  -- 'Entry', 'Mid', 'High-End', 'Summit'
+  target_audience TEXT[],      -- ['Audiophile', 'Professional', 'Consumer']
+  
+  -- 描述
+  description TEXT,
+  key_features TEXT[],
+  
+  -- 外观
+  dimensions JSONB,  -- {length, width, height, unit}
+  weight_grams INTEGER,
+  build_materials TEXT[],
+  color_options TEXT[],
+  
+  -- 时间戳
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW(),
+  
+  -- 索引
+  UNIQUE(manufacturer, model)
+);
+
+CREATE INDEX idx_devices_type ON devices(device_type);
+CREATE INDEX idx_devices_manufacturer ON devices(manufacturer);
+CREATE INDEX idx_devices_release_date ON devices(release_date);
+```
+
+### 技术规格表 (device_specifications)
+
+```sql
+CREATE TABLE device_specifications (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  device_id UUID REFERENCES devices(id) ON DELETE CASCADE,
+  
+  -- DAC 规格
+  dac_chip VARCHAR(100),
+  dac_architecture VARCHAR(50),  -- 'Delta-Sigma', 'R2R', 'Hybrid'
+  
+  -- 数字输入能力
+  max_pcm_sample_rate INTEGER,  -- Hz
+  max_pcm_bit_depth INTEGER,
+  max_dsd_rate INTEGER,          -- DSD64=2822400, DSD128=5644800
+  supported_formats TEXT[],      -- ['PCM', 'DSD', 'MQA']
+  
+  -- 模拟输出
+  output_voltage_se_vrms DECIMAL(6,3),  -- Single-ended
+  output_voltage_bal_vrms DECIMAL(6,3), -- Balanced
+  output_impedance_se_ohm DECIMAL(6,2),
+  output_impedance_bal_ohm DECIMAL(6,2),
+  
+  -- 耳放输出功率 (mW @ ohm)
+  output_power JSONB,  -- [{power_mw, load_ohm, thd_percent}]
+  
+  -- 失真与噪声
+  thd_n_measurements JSONB,  -- [{value, frequency, level, load, condition}]
+  snr_db DECIMAL(5,2),
+  snr_weighted VARCHAR(20),  -- 'A-weighted', 'Unweighted'
+  dynamic_range_db DECIMAL(5,2),
+  imd_percent DECIMAL(6,4),
+  crosstalk_db DECIMAL(6,2),
+  
+  -- 频率响应
+  freq_response_min_hz INTEGER,
+  freq_response_max_hz INTEGER,
+  freq_response_tolerance_db DECIMAL(4,2),
+  
+  -- 时钟与抖动
+  clock_type VARCHAR(100),
+  jitter_ps DECIMAL(6,2),
+  
+  -- 功耗
+  power_consumption_idle_w DECIMAL(5,2),
+  power_consumption_typical_w DECIMAL(5,2),
+  power_consumption_max_w DECIMAL(5,2),
+  
+  -- 其他
+  operating_temp_min_c INTEGER,
+  operating_temp_max_c INTEGER,
+  
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+```
+
+### 连接接口表 (device_connectivity)
+
+```sql
+CREATE TABLE device_connectivity (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  device_id UUID REFERENCES devices(id) ON DELETE CASCADE,
+  
+  interface_type VARCHAR(50) NOT NULL,  -- 'USB', 'Optical', 'Coaxial', etc.
+  interface_standard VARCHAR(50),       -- 'USB 2.0', 'USB-C', 'XLR', etc.
+  direction VARCHAR(20) NOT NULL,       -- 'Input', 'Output', 'Bidirectional'
+  location VARCHAR(20),                 -- 'Front', 'Back', 'Side'
+  connector_type VARCHAR(50),           -- '3.5mm TRS', '4.4mm TRRRS', etc.
+  quantity INTEGER DEFAULT 1,
+  
+  -- 数字接口特性
+  max_sample_rate INTEGER,  -- for digital interfaces
+  usb_class VARCHAR(20),    -- 'UAC1', 'UAC2'
+  
+  -- 无线特性
+  bluetooth_version VARCHAR(20),
+  bluetooth_codecs TEXT[],  -- ['SBC', 'AAC', 'LDAC', 'aptX HD']
+  wifi_standards TEXT[],    -- ['802.11ac', 'WiFi 6']
+  
+  notes TEXT,
+  
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_connectivity_device ON device_connectivity(device_id);
+CREATE INDEX idx_connectivity_type ON device_connectivity(interface_type);
+```
+
+### 价格历史表 (price_history)
+
+```sql
+CREATE TABLE price_history (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  device_id UUID REFERENCES devices(id) ON DELETE CASCADE,
+  
+  price_value DECIMAL(10,2) NOT NULL,
+  currency VARCHAR(3) NOT NULL,  -- 'CNY', 'USD', 'EUR', 'JPY'
+  price_type VARCHAR(50),        -- 'MSRP', 'Street', 'Promotional', 'Used'
+  
+  region VARCHAR(50),            -- 'CN', 'US', 'EU', 'JP'
+  source VARCHAR(200),           -- 'Official', 'JD.com', 'Amazon.com'
+  source_url TEXT,
+  
+  valid_from DATE NOT NULL,
+  valid_to DATE,
+  is_official BOOLEAN DEFAULT FALSE,
+  
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_price_device ON price_history(device_id);
+CREATE INDEX idx_price_date ON price_history(valid_from, valid_to);
+```
+
+### 测量数据表 (measurements)
+
+```sql
+CREATE TABLE measurements (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  device_id UUID REFERENCES devices(id) ON DELETE CASCADE,
+  
+  measurement_type VARCHAR(50) NOT NULL,  -- 'THD+N', 'Frequency_Response', 'IMD', etc.
+  measurement_date DATE NOT NULL,
+  
+  -- 测试条件
+  test_signal JSONB,  -- {type, frequency, amplitude, duration}
+  test_load_ohm INTEGER,
+  test_gain_db DECIMAL(4,1),
+  sample_rate INTEGER,
+  
+  -- 测试环境
+  temperature_c DECIMAL(4,1),
+  humidity_percent DECIMAL(4,1),
+  
+  -- 测试设备
+  equipment VARCHAR(200),  -- 'Audio Precision APx555'
+  calibration_date DATE,
+  
+  -- 测量结果 (存储为 JSONB 以适应不同类型的测量)
+  results JSONB NOT NULL,
+  /*
+  示例 - THD+N:
+  {
+    "thd_n_percent": 0.0005,
+    "thd_percent": 0.0003,
+    "noise_floor_dbfs": -120,
+    "harmonics": [
+      {"order": 2, "level_db": -110},
+      {"order": 3, "level_db": -115}
+    ]
+  }
+  
+  示例 - 频率响应:
+  {
+    "data_points": [
+      {"frequency": 20, "magnitude_db": -0.1, "phase_deg": 0},
+      {"frequency": 50, "magnitude_db": 0.0, "phase_deg": -2},
+      ...
+    ],
+    "flatness_20_20k_db": 0.15
+  }
+  */
+  
+  -- 元数据
+  measured_by VARCHAR(100),
+  data_source_url TEXT,
+  notes TEXT,
+  
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_measurements_device ON measurements(device_id);
+CREATE INDEX idx_measurements_type ON measurements(measurement_type);
+CREATE INDEX idx_measurements_date ON measurements(measurement_date);
+```
+
+### 主观评价表 (subjective_reviews)
+
+```sql
+CREATE TABLE subjective_reviews (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  device_id UUID REFERENCES devices(id) ON DELETE CASCADE,
+  
+  reviewer_id UUID,  -- 关联到用户表
+  review_date DATE NOT NULL,
+  
+  -- 测试配置
+  test_system JSONB,  -- {source, pairing_device, cables, test_tracks}
+  listening_duration_hours INTEGER,
+  
+  -- 分项评分 (1-10 或 1-5)
+  sound_quality_score DECIMAL(3,1),
+  build_quality_score DECIMAL(3,1),
+  functionality_score DECIMAL(3,1),
+  usability_score DECIMAL(3,1),
+  value_score DECIMAL(3,1),
+  overall_score DECIMAL(3,1),
+  
+  -- 听感描述
+  sound_signature VARCHAR(50),  -- 'Neutral', 'Warm', 'Bright', 'V-shaped'
+  bass_description TEXT,
+  midrange_description TEXT,
+  treble_description TEXT,
+  soundstage_description TEXT,
+  dynamics_description TEXT,
+  
+  -- 音乐类型适配 (1-5 stars)
+  classical_rating DECIMAL(2,1),
+  pop_rating DECIMAL(2,1),
+  rock_rating DECIMAL(2,1),
+  jazz_rating DECIMAL(2,1),
+  electronic_rating DECIMAL(2,1),
+  
+  -- 优缺点
+  pros TEXT[],
+  cons TEXT[],
+  
+  -- 推荐与搭配
+  recommended_for TEXT[],
+  not_recommended_for TEXT[],
+  pairing_suggestions TEXT[],
+  
+  -- 完整评测内容
+  full_review_text TEXT,
+  full_review_url TEXT,
+  
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_reviews_device ON subjective_reviews(device_id);
+CREATE INDEX idx_reviews_reviewer ON subjective_reviews(reviewer_id);
+CREATE INDEX idx_reviews_date ON subjective_reviews(review_date);
+```
+
+### 用户评分表 (user_ratings)
+
+```sql
+CREATE TABLE user_ratings (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  device_id UUID REFERENCES devices(id) ON DELETE CASCADE,
+  user_id UUID NOT NULL,
+  
+  rating DECIMAL(2,1) NOT NULL CHECK (rating >= 1 AND rating <= 5),
+  review_text TEXT,
+  
+  ownership_verified BOOLEAN DEFAULT FALSE,
+  ownership_duration_months INTEGER,
+  
+  helpful_count INTEGER DEFAULT 0,
+  
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW(),
+  
+  UNIQUE(device_id, user_id)
+);
+
+CREATE INDEX idx_user_ratings_device ON user_ratings(device_id);
+```
+
+## TypeScript / Prisma Schema 示例
+
+```typescript
+// TypeScript 类型定义
+
+export enum DeviceType {
+  DAC = 'DAC',
+  Amplifier = 'Amplifier',
+  IntegratedAmp = 'IntegratedAmp',
+  Headphone = 'Headphone',
+  IEM = 'IEM',
+  Speaker = 'Speaker',
+  StreamingDAC = 'StreamingDAC'
+}
+
+export enum MarketSegment {
+  Entry = 'Entry',          // <¥1000
+  Mid = 'Mid',              // ¥1000-3000
+  HighEnd = 'HighEnd',      // ¥3000-10000
+  Summit = 'Summit'         // >¥10000
+}
+
+export interface Device {
+  id: string;
+  deviceType: DeviceType;
+  manufacturer: string;
+  model: string;
+  series?: string;
+  releaseDate?: Date;
+  discontinuedDate?: Date;
+  countryOfOrigin?: string;
+  marketSegment?: MarketSegment;
+  targetAudience: string[];
+  description?: string;
+  keyFeatures: string[];
+  dimensions?: Dimensions;
+  weightGrams?: number;
+  buildMaterials: string[];
+  colorOptions: string[];
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface Dimensions {
+  length: number;
+  width: number;
+  height: number;
+  unit: 'mm' | 'cm' | 'inch';
+}
+
+export interface DeviceSpecification {
+  id: string;
+  deviceId: string;
+  
+  // DAC
+  dacChip?: string;
+  dacArchitecture?: 'Delta-Sigma' | 'R2R' | 'Hybrid';
+  
+  // Digital capability
+  maxPcmSampleRate?: number;  // Hz
+  maxPcmBitDepth?: number;
+  maxDsdRate?: number;
+  supportedFormats: string[];
+  
+  // Analog output
+  outputVoltageSe?: number;   // Vrms
+  outputVoltageBal?: number;
+  outputImpedanceSe?: number; // Ω
+  outputImpedanceBal?: number;
+  
+  // Amplifier output power
+  outputPower?: OutputPower[];
+  
+  // Distortion & Noise
+  thdNMeasurements?: ThdNMeasurement[];
+  snrDb?: number;
+  snrWeighted?: 'A-weighted' | 'C-weighted' | 'Unweighted';
+  dynamicRangeDb?: number;
+  imdPercent?: number;
+  crosstalkDb?: number;
+  
+  // Frequency response
+  freqResponseMinHz?: number;
+  freqResponseMaxHz?: number;
+  freqResponseToleranceDb?: number;
+  
+  // Clock & Jitter
+  clockType?: string;
+  jitterPs?: number;
+  
+  // Power consumption
+  powerConsumptionIdleW?: number;
+  powerConsumptionTypicalW?: number;
+  powerConsumptionMaxW?: number;
+  
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface OutputPower {
+  powerMw: number;
+  loadOhm: number;
+  thdPercent: number;
+}
+
+export interface ThdNMeasurement {
+  value: number;           // percent
+  frequency: number;       // Hz
+  level: number;          // dBFS
+  load: number;           // Ω
+  condition?: string;
+}
+
+export interface Measurement {
+  id: string;
+  deviceId: string;
+  measurementType: MeasurementType;
+  measurementDate: Date;
+  testSignal: TestSignal;
+  testLoadOhm?: number;
+  testGainDb?: number;
+  sampleRate?: number;
+  temperatureC?: number;
+  humidityPercent?: number;
+  equipment: string;
+  calibrationDate?: Date;
+  results: any;  // Type depends on measurementType
+  measuredBy?: string;
+  dataSourceUrl?: string;
+  notes?: string;
+  createdAt: Date;
+}
+
+export enum MeasurementType {
+  THD_N = 'THD+N',
+  FrequencyResponse = 'Frequency_Response',
+  IMD = 'IMD',
+  Crosstalk = 'Crosstalk',
+  OutputImpedance = 'Output_Impedance',
+  Jitter = 'Jitter'
+}
+
+export interface TestSignal {
+  type: 'Sine' | 'Square' | 'Impulse' | 'Multitone' | 'Sweep';
+  frequency?: number;  // Hz
+  amplitude?: number;  // dBFS or V
+  duration?: number;   // seconds
+}
+```
+
+## 查询示例
+
+### 按类型和价格范围查找设备
+
+```sql
+SELECT 
+  d.*,
+  ph.price_value,
+  ph.currency
+FROM devices d
+LEFT JOIN LATERAL (
+  SELECT price_value, currency
+  FROM price_history
+  WHERE device_id = d.id 
+    AND currency = 'CNY'
+    AND valid_from <= CURRENT_DATE
+    AND (valid_to IS NULL OR valid_to >= CURRENT_DATE)
+  ORDER BY valid_from DESC
+  LIMIT 1
+) ph ON TRUE
+WHERE 
+  d.device_type = 'DAC'
+  AND ph.price_value BETWEEN 3000 AND 10000
+ORDER BY ph.price_value;
+```
+
+### 获取完整设备信息（含规格、接口、最新价格）
+
+```sql
+SELECT 
+  d.*,
+  ds.*,
+  json_agg(DISTINCT dc.*) as connectivity,
+  ph.current_price
+FROM devices d
+LEFT JOIN device_specifications ds ON d.id = ds.device_id
+LEFT JOIN device_connectivity dc ON d.id = dc.device_id
+LEFT JOIN LATERAL (
+  SELECT json_build_object(
+    'value', price_value,
+    'currency', currency,
+    'date', valid_from
+  ) as current_price
+  FROM price_history
+  WHERE device_id = d.id 
+    AND valid_from <= CURRENT_DATE
+    AND (valid_to IS NULL OR valid_to >= CURRENT_DATE)
+  ORDER BY valid_from DESC
+  LIMIT 1
+) ph ON TRUE
+WHERE d.id = 'device_uuid'
+GROUP BY d.id, ds.id, ph.current_price;
+```
+
+### 按性能筛选（例如：SNR > 120dB）
+
+```sql
+SELECT 
+  d.manufacturer,
+  d.model,
+  ds.snr_db,
+  ds.thd_n_measurements->0->>'value' as thd_n
+FROM devices d
+JOIN device_specifications ds ON d.id = ds.device_id
+WHERE 
+  ds.snr_db > 120
+  AND d.device_type IN ('DAC', 'IntegratedAmp')
+ORDER BY ds.snr_db DESC;
+```
+
+## 数据完整性约束
+
+### 必需字段校验
+- 设备必须有 manufacturer 和 model
+- 价格必须有 currency 和 valid_from
+- 测量必须有 measurement_type 和 results
+
+### 数值范围约束
+```sql
+ALTER TABLE device_specifications
+  ADD CONSTRAINT check_sample_rate 
+    CHECK (max_pcm_sample_rate BETWEEN 44100 AND 1536000),
+  ADD CONSTRAINT check_bit_depth 
+    CHECK (max_pcm_bit_depth IN (16, 24, 32)),
+  ADD CONSTRAINT check_snr 
+    CHECK (snr_db BETWEEN 60 AND 140);
+```
+
+### 引用完整性
+- 所有子表都应使用 `ON DELETE CASCADE`
+- 防止孤立记录
+
+## 索引策略
+
+- 为所有外键创建索引
+- 为常用查询字段创建索引（manufacturer, device_type, price）
+- 为 JSONB 字段的常用查询路径创建 GIN 索引
+
+```sql
+CREATE INDEX idx_specs_jsonb_output_power 
+  ON device_specifications USING GIN (output_power);
+  
+CREATE INDEX idx_measurements_jsonb_results 
+  ON measurements USING GIN (results);
+```
