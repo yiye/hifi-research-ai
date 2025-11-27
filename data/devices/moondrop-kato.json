@@ -1,0 +1,447 @@
+{
+  "deviceType": "IEM",
+  "manufacturer": "Moondrop",
+  "manufacturerCN": "水月雨",
+  "fullManufacturerCN": "成都水月雨科技有限公司",
+  "model": "KATO",
+  "modelCN": "加藤",
+  "fullName": "KATO 旗舰级先进技术动圈入耳式耳机",
+  "releaseDate": "2021",
+  "discontinuedDate": null,
+  "countryOfOrigin": "CN",
+  "marketSegment": "Mid-High",
+  "targetAudience": [
+    "Audiophile",
+    "Music Enthusiast",
+    "Critical Listening"
+  ],
+  "description": "Moondrop KATO 是一款旗舰级单动圈入耳式耳机，搭载全新研发的 10mm ULT 超线性动圈单元和第三代 DLC 复合振膜。通过 FEA 有限元仿真优化腔体结构，实现极低失真和优秀的频响表现。采用不锈钢 MIM 粉末冶金工艺打造，配备可更换导管设计，满足不同听音偏好。",
+  "keyFeatures": [
+    "10mm ULT 超线性动圈单元 - 全新研发，极低非线性和线性失真",
+    "第三代 DLC 复合振膜 - 相比第一代降低非线性失真至少 80%",
+    "FEA 有限元仿真优化 - 声学前腔和腔体结构精密设计",
+    "可更换导管设计 - 不锈钢和黄铜两种材质，可调声音风格",
+    "MIM 不锈钢外壳 - 粉末冶金工艺，超高强度和复杂外观",
+    "第三代专利防堵塞滤波器 - 长期稳定性优秀",
+    "超低失真 THD <0.15% @ 1kHz - 部分频段低于 0.05%",
+    "高灵敏度 123dB/Vrms - 易于驱动",
+    "配备星绞结构高纯铜厚镀银线和 Spring Tips（清泉）耳套"
+  ],
+  "dimensions": {
+    "notes": "人体工学设计，腔体尺寸适中，佩戴舒适"
+  },
+  "weightGrams": null,
+  "buildMaterials": [
+    "MIM 不锈钢外壳（粉末冶金工艺）",
+    "第三代 DLC 复合振膜",
+    "不锈钢声导管 × 2",
+    "黄铜声导管 × 2",
+    "医用级硅胶耳套"
+  ],
+  "colorOptions": [
+    "银灰色（金属质感）"
+  ],
+  "specifications": {
+    "driverType": "Dynamic Driver",
+    "driverSize": {
+      "value": 10,
+      "unit": "mm"
+    },
+    "driverTechnology": "ULT 超线性动圈单元",
+    "driverDescription": "全新研发的超线性动圈单元，通过优化磁路设计和振膜材料，实现极低的非线性失真和线性失真",
+    "diaphragm": {
+      "type": "第三代 DLC（Diamond-Like Carbon）复合振膜",
+      "description": "类金刚石碳复合材料振膜",
+      "generation": "3rd Generation",
+      "benefits": [
+        "基于材料声学特征论证组合设计",
+        "经 FEA 有限元反复实验调教",
+        "相比第一代 DLC 振膜降低非线性失真至少 80%",
+        "兼具刚性和适度阻尼特性",
+        "高频延伸和瞬态响应出色"
+      ]
+    },
+    "acousticDesign": {
+      "optimization": "FEA 有限元仿真",
+      "tuningTarget": "VDSF Target Response",
+      "description": "通过 FEA 有限元仿真结合反复实验验证，对单元与腔体结构容积进行优化",
+      "acousticChamber": "声学前腔基于单元特性进行论证计算，借助 FEA 仿真模拟容积和结构",
+      "achievements": [
+        "高度契合 VDSF Target Response 频响曲线",
+        "无可挑剔的线性失真表现",
+        "极为优秀的频响特性，平直的全频道位",
+        "优秀的高频相位表现",
+        "罕见的高度还原母带制作录音师所聆听的声音的能力"
+      ],
+      "performanceComparison": "堪比头戴式静电耳机的非线性失真"
+    },
+    "interchangeableTubes": {
+      "supported": true,
+      "tubeTypes": [
+        {
+          "material": "不锈钢",
+          "quantity": 2,
+          "soundCharacteristic": "直白、清晰、解析力强"
+        },
+        {
+          "material": "黄铜",
+          "quantity": 2,
+          "soundCharacteristic": "音色润泽、泛音丰富、更具音乐性"
+        }
+      ],
+      "description": "附带两种不同材质的可更换声导管，可体验不同材料对声音的影响"
+    },
+    "acousticFilter": {
+      "generation": "第三代专利防堵塞滤波器",
+      "improvement": "全新改进设计",
+      "benefits": [
+        "防止耳垢堵塞",
+        "保持长期稳定的声学性能",
+        "易于维护和更换"
+      ]
+    },
+    "impedance": {
+      "value": 32,
+      "tolerance": 15,
+      "unit": "Ω",
+      "frequency": 1000,
+      "notes": "中等阻抗，适配移动和桌面设备"
+    },
+    "sensitivity": {
+      "value": 123,
+      "unit": "dB/Vrms",
+      "frequency": 1000,
+      "notes": "高灵敏度，易于驱动，手机可直推"
+    },
+    "frequencyResponse": {
+      "freeField": {
+        "minHz": 10,
+        "maxHz": 45000,
+        "range": "10Hz-45kHz",
+        "standard": "IEC61094, Free Field",
+        "notes": "自由场测量"
+      },
+      "effective": {
+        "minHz": 20,
+        "maxHz": 20000,
+        "toleranceDb": 3,
+        "range": "20Hz-20kHz (-3dB)",
+        "standard": "IEC60318-4",
+        "notes": "标准耦合腔测量，有效频响范围"
+      }
+    },
+    "thd": {
+      "value": 0.15,
+      "maxValue": 0.15,
+      "unit": "%",
+      "frequency": 1000,
+      "standard": "AES17 20kHz, A-Weight",
+      "condition": "<0.15% (@1kHz, AES17 20kHz, A-Weight)",
+      "notes": "中低频段总谐波失真甚至低于 0.05%，堪比头戴式静电耳机的非线性失真",
+      "detailedMeasurements": [
+        {
+          "frequencyRange": "中低频段",
+          "value": 0.05,
+          "unit": "%",
+          "condition": "中低频段总谐波失真",
+          "notes": "甚至低于 0.05%，性能堪比静电耳机"
+        },
+        {
+          "frequency": 1000,
+          "value": 0.15,
+          "unit": "%",
+          "condition": "1kHz, AES17 20kHz, A-Weight",
+          "notes": "全频段最大失真 <0.15%"
+        }
+      ]
+    },
+    "cableInterface": {
+      "type": "0.78mm 2-pin",
+      "recessed": true,
+      "detachable": true
+    },
+    "cablePlugs": [
+      {
+        "type": "3.5mm TRS",
+        "standard": "单端直插头"
+      }
+    ]
+  },
+  "cable": {
+    "type": "星绞结构高纯铜厚镀银耳机线",
+    "conductor": "OFC (Oxygen-Free Copper) + 厚镀银",
+    "structure": "星绞结构（Star-Quad）",
+    "length": {
+      "value": 1.2,
+      "unit": "m"
+    },
+    "connector": {
+      "earpiece": "0.78mm 2-pin 下沉式",
+      "plug": "3.5mm 立体声单端直插头"
+    },
+    "detachable": true,
+    "notes": "高品质线材，星绞结构有效降低干扰"
+  },
+  "soundSignature": {
+    "overall": "极为平直的频响，高度契合 VDSF Target Response",
+    "tuningTarget": "VDSF Target Response",
+    "tuningPhilosophy": "追求准确还原录音时的声音，展现乐器和人声的原始音色和位置，拥有罕见的高度还原母带制作录音师所聆听的声音的能力",
+    "bass": {
+      "quantity": "适中",
+      "quality": "质感扎实，弹性良好，下潜适度",
+      "extension": "延伸至 10Hz（自由场）",
+      "description": "量感适中，不过分强调，提供恰到好处的氛围感"
+    },
+    "midrange": {
+      "position": "自然位置",
+      "clarity": "清晰透明",
+      "vocals": "人声表现自然，厚度适中，结像清晰",
+      "timbre": "音色准确，乐器还原度高"
+    },
+    "treble": {
+      "extension": "延伸至 45kHz",
+      "brightness": "适中，不刺激",
+      "detail": "解析力高，细节丰富",
+      "phase": "高频相位表现优秀"
+    },
+    "soundstage": {
+      "width": "开阔自然",
+      "depth": "层次清晰",
+      "imaging": "结像准确，定位清晰",
+      "description": "提供开阔自然的聆听体验"
+    },
+    "resolution": "解析力出色，得益于极低失真（中低频段 <0.05%）",
+    "dynamics": "动态表现优秀",
+    "coherence": "单动圈带来优秀的相位一致性和全频段平直表现",
+    "soundRestoration": "罕见的高度还原母带制作录音师所聆听的声音的能力，真实展现音乐创作者耳中乐器和人声原本的音色和在声场中的位置",
+    "idealFor": [
+      "多类型音乐欣赏",
+      "追求准确音色的聆听者",
+      "需要高解析力的场景",
+      "日常娱乐和批判性聆听兼顾"
+    ],
+    "tubeComparison": {
+      "stainlessSteel": "更直白清晰，解析力更强，适合追求细节",
+      "brass": "音色更润泽，泛音更丰富，更具音乐性和耐听性"
+    }
+  },
+  "drivingRequirements": {
+    "difficulty": "易于驱动",
+    "minimumSource": "智能手机直推",
+    "recommendedSource": [
+      "智能手机",
+      "便携播放器",
+      "USB DAC",
+      "台式耳放"
+    ],
+    "idealVoltage": {
+      "min": 0.3,
+      "optimal": 0.7,
+      "max": 1.5,
+      "unit": "Vrms"
+    },
+    "powerCalculation": {
+      "at1Vrms": "123dB SPL"
+    },
+    "sourceImpedanceRequirement": "<2Ω 输出阻抗",
+    "gainRecommendation": "低增益即可，中增益可获得更好动态"
+  },
+  "accessories": {
+    "included": [
+      "KATO 耳机本体 × 1 对",
+      "星绞结构高纯铜厚镀银耳机线 × 1",
+      "黄铜导管 × 2",
+      "不锈钢导管 × 2",
+      "蓝色耳机包（灰边）× 1",
+      "灰色抽绳袋 × 1",
+      "清泉套（Spring Tips）（大中小各一对）",
+      "T41 海绵套（大中小各一对）",
+      "合格证 × 1",
+      "产品说明书 × 1",
+      "水月友希（三代）明信片 × 1"
+    ],
+    "highlights": [
+      "两种材质可更换导管，可调声音风格",
+      "配备水月雨自研 Spring Tips（清泉）硅胶耳套",
+      "星绞结构高纯铜厚镀银线材",
+      "豪华配件包装"
+    ]
+  },
+  "comfortAndFit": {
+    "weight": "轻量化",
+    "shellDesign": "MIM 不锈钢人体工学设计",
+    "cableDesign": "0.78mm 2-pin 下沉式，减少听诊器效应",
+    "wearStyle": "绕耳佩戴",
+    "isolationLevel": "中等",
+    "comfort": "腔体尺寸适中，佩戴舒适，长时间佩戴无压迫感",
+    "notes": "现代主义美学设计，呈现立体且丰富的层次感"
+  },
+  "technicalInnovations": [
+    {
+      "name": "ULT 超线性动圈单元",
+      "description": "全新研发的 10mm 超线性动圈单元",
+      "benefit": "非线性失真和线性失真均达到令人惊讶的表现"
+    },
+    {
+      "name": "第三代 DLC 复合振膜",
+      "description": "基于材料声学特征论证组合设计，经 FEA 有限元反复实验调教",
+      "benefit": "相比第一代 DLC 振膜降低非线性失真至少 80%"
+    },
+    {
+      "name": "FEA 有限元仿真优化",
+      "description": "对单元、腔体结构容积、声学前腔进行 FEA 有限元仿真和反复实验验证",
+      "benefit": "实现无可挑剔的线性失真表现和极为优秀的频响、高频相位表现"
+    },
+    {
+      "name": "MIM 粉末冶金工艺",
+      "description": "不锈钢 MIM（Metal Injection Molding）粉末冶金工艺铸造",
+      "benefit": "实现不规则的外观设计和超高强度"
+    },
+    {
+      "name": "可更换导管设计",
+      "description": "提供不锈钢和黄铜两种材质导管",
+      "benefit": "可体验不同材料对声音的影响，满足个性化需求"
+    },
+    {
+      "name": "Spring Tips（清泉）耳套",
+      "description": "全新开发设计的清泉耳塞套",
+      "benefit": "有效减少导管口的谐振失真，提供更自然的高频，减少漏音改善低频"
+    }
+  ],
+  "pricing": [
+    {
+      "value": 1399,
+      "currency": "CNY",
+      "priceType": "MSRP",
+      "region": "CN",
+      "source": "水月雨官方旗舰店",
+      "sourceUrl": "https://moondroplab.com/cn/products/kato",
+      "validFrom": "2021",
+      "validTo": null,
+      "isOfficial": true,
+      "notes": "官方建议零售价"
+    }
+  ],
+  "valueProposition": {
+    "pricePerformanceRatio": 9,
+    "rating": 9,
+    "strengths": [
+      "ULT 超线性动圈单元技术先进",
+      "第三代 DLC 振膜失真比第一代降低 80%",
+      "THD <0.15%，部分频段 <0.05%，媲美静电耳机",
+      "FEA 有限元仿真优化，频响和相位表现优秀",
+      "可更换导管设计，玩法丰富",
+      "MIM 不锈钢外壳，工艺精湛",
+      "配件豪华（清泉套、镀银线、多种导管）",
+      "易于驱动，手机可直推",
+      "平直频响，真实还原录音"
+    ],
+    "weaknesses": [
+      "不锈钢外壳可能比树脂腔体稍重",
+      "平直调音可能不够 \"讨好耳朵\"",
+      "可更换导管的声音差异不算非常大"
+    ],
+    "competitorComparison": [
+      {
+        "competitor": "森海塞尔 IE300",
+        "price": 2399,
+        "advantage": "KATO 价格便宜 ¥1000，失真更低，性价比更高",
+        "disadvantage": "IE300 品牌知名度更高"
+      },
+      {
+        "competitor": "水月雨 ARIA",
+        "price": 799,
+        "advantage": "KATO 失真更低（降低 80%），振膜和单元更先进，配件更豪华",
+        "disadvantage": "ARIA 价格更便宜，性价比也很高"
+      },
+      {
+        "competitor": "水月雨 KADENZ",
+        "price": 2599,
+        "advantage": "KADENZ 失真更低（THD ≤0.03%），调音更监听",
+        "disadvantage": "KATO 价格便宜 ¥1200，可玩性更高（可换导管）"
+      }
+    ],
+    "recommendedFor": [
+      "追求低失真和高保真的发烧友",
+      "喜欢单动圈自然音色的用户",
+      "需要多类型音乐兼容性的听众",
+      "预算 1300-1500 元的用户",
+      "喜欢可换导管玩法的玩家",
+      "追求准确音色而非染色的理性用户"
+    ],
+    "notRecommendedFor": [
+      "追求极致低频量感的用户",
+      "偏好女毒或特定音色倾向的用户",
+      "对重量敏感的用户（金属壳体相对较重）"
+    ]
+  },
+  "measurements": {
+    "equipment": "专业音频测试设备",
+    "testConditions": {
+      "earTips": "Spring Tips（清泉）耳套",
+      "notes": "使用 Spring Tips 进行频响和失真测量"
+    },
+    "frequencyResponseGraph": {
+      "available": true,
+      "source": "官方测量数据",
+      "targetCurve": "VDSF Target Response",
+      "imagePath": "images/moondrop-kato/frequency-response.png",
+      "testEarTips": "Spring Tips（清泉）",
+      "notes": "高度契合 VDSF Target Response，平直的全频道位，使用 Spring Tips 耳套测量"
+    },
+    "performanceHighlights": {
+      "frequencyResponse": "高度契合 VDSF Target Response 频响曲线，平直的全频道位",
+      "distortion": "中低频段总谐波失真甚至低于 0.05%，堪比头戴式静电耳机",
+      "soundRestoration": "罕见的高度还原母带制作录音师所聆听的声音的能力",
+      "comparison": "相比普通 HiFi 耳机能真实地展现出音乐创作者耳中乐器和人声原本的音色和在声场中的位置"
+    },
+    "notes": "通过 FEA 有限元仿真优化，融合多个全新的技术平台，实现极低失真和优秀频响，各项指标均大幅度提升"
+  },
+  "productImages": {
+    "mainImage": "images/moondrop-kato/kato-product-main.jpeg",
+    "frequencyResponseGraph": "images/moondrop-kato/frequency-response.png",
+    "detailImages": [
+      "images/moondrop-kato/kato-detail-036.jpeg",
+      "images/moondrop-kato/kato-detail-040.jpeg",
+      "images/moondrop-kato/kato-detail-044.jpeg"
+    ]
+  },
+  "officialLinks": {
+    "productPage": "https://moondroplab.com/cn/products/kato",
+    "manual": "https://cdn.prod.website-files.com/627128d862c9a44234848dda/6745426a982d0763baadcb32_KATO-%E8%AF%B4%E6%98%8E%E4%B9%A6%E4%B8%AD%E6%96%87%E7%89%88.pdf",
+    "support": "https://moondroplab.com/cn"
+  },
+  "awards": [
+    {
+      "name": "VGP 2022 获奖产品",
+      "organization": "日本视听产品评选（Visual Grand Prix）",
+      "year": "2022",
+      "category": "有线耳机",
+      "notes": "可能获奖"
+    }
+  ],
+  "usageTips": [
+    "选择合适尺寸的耳套以确保密封性和舒适度",
+    "尝试不锈钢和黄铜两种导管找到最适合自己的声音",
+    "使用 Spring Tips（清泉）耳套可获得更自然的高频",
+    "搭配输出阻抗 <2Ω 的前端设备",
+    "使用低增益设置即可获得充足音量",
+    "定期清洁导管和更换防尘滤网"
+  ],
+  "maintenanceNotes": [
+    "定期清洁耳机导管，使用专用清洁工具",
+    "检查防尘滤网，如堵塞需更换",
+    "保持 0.78mm 2-pin 接口清洁干燥",
+    "避免大音量长时间使用",
+    "线材轻拿轻放，避免过度弯折",
+    "妥善收纳在随附的蓝色耳机包中"
+  ],
+  "metadata": {
+    "dataSource": "官方网站 + 网络测评 + 官方说明书",
+    "lastUpdated": "2024-11-27",
+    "verifiedBy": "AI_Assistant",
+    "dataQuality": "high",
+    "notes": "基于水月雨官方产品页面、用户测评和技术参数整理。KATO 是水月雨在 ARIA 之后推出的中高端单动圈耳机，采用更先进的 ULT 超线性动圈单元和第三代 DLC 振膜，失真相比 ARIA 降低约 80%。"
+  }
+}
+

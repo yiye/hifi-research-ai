@@ -1,0 +1,350 @@
+{
+  "deviceType": "IEM",
+  "manufacturer": "Moondrop",
+  "model": "Harmon",
+  "modelChinese": "和鸣",
+  "fullName": "Harmon XTM-3DD 入耳式耳机",
+  "releaseDate": "2024",
+  "discontinuedDate": null,
+  "countryOfOrigin": "CN",
+  "marketSegment": "Mid",
+  "targetAudience": [
+    "Audiophile",
+    "Music Enthusiast"
+  ],
+  "description": "Moondrop Harmon（和鸣）是一款采用创新同轴堆叠四腔分频技术的三动圈入耳式耳机。配备三颗10mm全尺寸动圈单元，通过物理分频实现精准的频响控制，符合VDSF 5128 Target Response曲线。在1Pa声压下全频段非线性失真低于0.1%，实现了多动圈耳机的超低失真和精准调校。",
+  "keyFeatures": [
+    "同轴堆叠四腔分频（XTM）技术 - 三动圈独立声学腔体",
+    "10mm玻璃球顶复合振膜中高音单元 + 水平对置双10mm纸盆低音单元",
+    "符合 VDSF 5128 Demo Target Response 调音曲线",
+    "全频段 THD < 0.1% @ 1Pa - 远低于多动圈和混合式耳机",
+    "物理分频设计 - 避免数字/电路分频的声染色和相位问题",
+    "0.78-2pin可换线设计，支持3.5mm单端和4.4mm平衡插头互换"
+  ],
+  "dimensions": {
+    "length": null,
+    "width": null,
+    "height": null,
+    "unit": "mm",
+    "notes": "腔体采用金属面板 + 黑格科技3D打印耳壳拼接，轻量化设计"
+  },
+  "weightGrams": null,
+  "buildMaterials": [
+    "金属面板（CNC精密加工）",
+    "黑格科技3D打印耳壳",
+    "玻璃球顶振膜（中高音）",
+    "纸盆复合振膜（低音）"
+  ],
+  "colorOptions": [
+    "黑色/金属色"
+  ],
+  "specifications": {
+    "driverConfiguration": {
+      "type": "Triple Dynamic Driver",
+      "architecture": "同轴堆叠四腔分频 (XTM-3DD)",
+      "midHighDriver": {
+        "type": "Dynamic",
+        "size": 10,
+        "unit": "mm",
+        "diaphragm": "玻璃球顶复合振膜",
+        "quantity": 1,
+        "frequencyRange": "中频-高频"
+      },
+      "bassDriver": {
+        "type": "Dynamic",
+        "size": 10,
+        "unit": "mm",
+        "diaphragm": "纸盆复合振膜",
+        "quantity": 2,
+        "configuration": "水平对置双动圈系统",
+        "frequencyRange": "低频"
+      }
+    },
+    "acousticDesign": {
+      "dividerType": "物理分频 (类模拟分频)",
+      "chambers": 4,
+      "chamberDescription": "每个动圈单元拥有独立声学腔体，同轴堆叠设计",
+      "advantages": [
+        "避免数字分频的声染色",
+        "消除电路调音带来的延迟和相位问题",
+        "提升声学效率和声道协调性"
+      ]
+    },
+    "impedance": {
+      "value": 19,
+      "tolerance": 15,
+      "unit": "Ω",
+      "frequency": 1000
+    },
+    "sensitivity": {
+      "value": 114,
+      "unit": "dB/Vrms",
+      "frequency": 1000
+    },
+    "frequencyResponse": {
+      "minHz": 10,
+      "maxHz": 60000,
+      "effectiveRange": "20Hz-20kHz (IEC60318-4, -3dB)",
+      "targetCurve": "VDSF 5128 Demo Target Response",
+      "notes": "符合哈曼曲线变体，兼顾传输函数和编好的高素质调音"
+    },
+    "thdMeasurements": [
+      {
+        "value": 0.1,
+        "unit": "%",
+        "frequency": 1000,
+        "level": 94,
+        "levelUnit": "dB SPL",
+        "condition": "1kHz, 94dB SPL",
+        "notes": "≤0.1%，实测全频段非线性失真在1Pa声压下低于0.1%"
+      }
+    ],
+    "cableInterface": {
+      "type": "0.78mm 2-pin",
+      "recessed": true,
+      "detachable": true
+    },
+    "cablePlugs": [
+      {
+        "type": "3.5mm TRS",
+        "standard": "单端",
+        "interchangeable": true
+      },
+      {
+        "type": "4.4mm TRRRS",
+        "standard": "平衡",
+        "interchangeable": true
+      }
+    ]
+  },
+  "soundSignature": {
+    "overall": "均衡中正，高还原度",
+    "bass": {
+      "quantity": "中上",
+      "quality": "深邃有力，下潜深，弹性十足",
+      "description": "双10mm纸盆低音单元水平对置，提供充沛且有质感的低频"
+    },
+    "midrange": {
+      "quantity": "饱满",
+      "quality": "厚度和密度出色，细腻纯净",
+      "description": "中频具有良好的厚度和层次感，人声表现自然不失真"
+    },
+    "treble": {
+      "quantity": "适中",
+      "quality": "清澈透明，张力十足",
+      "extension": "延伸至60kHz",
+      "description": "玻璃球顶单元带来通透的高频，解析力强但不刺激"
+    },
+    "soundstage": {
+      "width": "中上",
+      "depth": "良好",
+      "imaging": "精准",
+      "description": "三动圈同轴设计带来良好的声场定位和层次感"
+    },
+    "dynamics": {
+      "macroDynamics": "出色",
+      "microDynamics": "良好",
+      "description": "全尺寸动圈带来优秀的动态表现和力量感"
+    },
+    "musicGenres": [
+      "流行",
+      "摇滚",
+      "古典",
+      "电子",
+      "爵士"
+    ],
+    "notes": "调音均衡中正，适合大多数音乐类型。符合VDSF 5128目标曲线，兼顾准确性和音乐性"
+  },
+  "accessories": [
+    {
+      "item": "耳机本体",
+      "quantity": 1
+    },
+    {
+      "item": "可换插头耳机线材",
+      "quantity": 1,
+      "details": "0.78-2pin，配3.5mm单端和4.4mm平衡可互换插头"
+    },
+    {
+      "item": "收纳包",
+      "quantity": 1
+    },
+    {
+      "item": "硅胶耳塞套",
+      "quantity": 3,
+      "details": "大、中、小三种尺寸"
+    },
+    {
+      "item": "说明书",
+      "quantity": 1
+    },
+    {
+      "item": "合格证",
+      "quantity": 1
+    },
+    {
+      "item": "售后卡",
+      "quantity": 1
+    }
+  ],
+  "comfortAndFit": {
+    "weight": "轻量化",
+    "shellDesign": "人体工学设计，金属与3D打印结合",
+    "cableDesign": "可换线，减少听诊器效应",
+    "wearStyle": "绕耳佩戴",
+    "isolationLevel": "中等",
+    "comfort": "长时间佩戴舒适稳固",
+    "notes": "金属外壳经CNC精密加工，流畅线条设计，佩戴舒适度良好"
+  },
+  "drivingRequirements": {
+    "easyToDrive": true,
+    "impedance": 19,
+    "sensitivity": 114,
+    "recommendedSource": [
+      "手机直推",
+      "便携播放器",
+      "台式耳放"
+    ],
+    "minimumPower": "低增益即可",
+    "optimalPower": "中低功率前端",
+    "notes": "19Ω阻抗，114dB/Vrms灵敏度，易于驱动，但素质较高的前端能发挥更好的潜力"
+  },
+  "measurements": {
+    "frequencyResponseGraph": {
+      "available": true,
+      "source": "官方 - B&K 5128 HATS测量",
+      "targetCurve": "VDSF 5128 Demo Target Response",
+      "imagePath": "images/moondrop-harmon/harmon-detail-04-frequency-response.jpg",
+      "sourceUrl": "https://cdn.prod.website-files.com/627128d862c9a44234848dda/68257118aa2da9afc2649336_Harmon-%E8%AF%A6%E6%83%85-04.jpg",
+      "notes": "由水月雨研发中心声学自由场实验室使用 B&K 5128 测量，展示与VDSF 5128 Demo Target Response的对比"
+    },
+    "thdGraph": {
+      "available": true,
+      "source": "官方 - B&K 5128测量",
+      "imagePath": "images/moondrop-harmon/harmon-detail-06-thd.jpg",
+      "sourceUrl": "https://cdn.prod.website-files.com/627128d862c9a44234848dda/6825711861bedda6147f5ef7_Harmon-%E8%AF%A6%E6%83%85-06.jpg",
+      "notes": "全频段非线性失真曲线，1Pa声压下全频段低于0.1%"
+    },
+    "equipment": "B&K 5128",
+    "measuredBy": "水月雨研发中心声学自由场实验室",
+    "notes": "成熟动圈工艺和应用技术的优势远比多动铁和混合式多单元耳机更低的非线性失真"
+  },
+  "productImages": {
+    "mainImage": "images/moondrop-harmon/harmon-product-main.jpg",
+    "detailImages": [
+      "images/moondrop-harmon/harmon-detail-01-intro.jpg",
+      "images/moondrop-harmon/harmon-detail-04-frequency-response.jpg",
+      "images/moondrop-harmon/harmon-detail-06-thd.jpg"
+    ]
+  },
+  "reviews": [
+    {
+      "source": "搜狐科技",
+      "rating": null,
+      "summary": "水月雨Harmon凭借其创新的三动圈设计和卓越的音质表现，在同价位耳机中脱颖而出",
+      "pros": [
+        "声音均衡中正，还原度高",
+        "出色的力量感和动态表现",
+        "低频深邃有力，中高频清澈透明",
+        "层次分明，适合多种音乐类型"
+      ],
+      "cons": [],
+      "url": "https://www.sohu.com/a/892987294_122378877",
+      "date": "2024"
+    },
+    {
+      "source": "搜狐数码",
+      "rating": null,
+      "summary": "创新性地通过物理结构实现'类模拟分频'，避免了数字分频或电路调音可能带来的声染色和延迟问题",
+      "pros": [
+        "三颗10mm全尺寸动圈创新设计",
+        "中频厚度和密度出色，声音饱满",
+        "低频下潜深，弹性十足",
+        "高频张力十足，整体动态表现出色"
+      ],
+      "cons": [],
+      "url": "https://www.sohu.com/a/893357033_120461981",
+      "date": "2024"
+    }
+  ],
+  "pricing": [
+    {
+      "value": 1699,
+      "currency": "CNY",
+      "priceType": "MSRP",
+      "region": "CN",
+      "source": "官方旗舰店",
+      "sourceUrl": "https://moondroplab.com/cn/products/harmon",
+      "validFrom": "2024",
+      "validTo": null,
+      "isOfficial": true
+    },
+    {
+      "value": 1549,
+      "currency": "CNY",
+      "priceType": "Promotional",
+      "region": "CN",
+      "source": "京东",
+      "sourceUrl": "https://jd.zol.com.cn/1057/10575935.html",
+      "validFrom": "2024",
+      "validTo": null,
+      "isOfficial": false,
+      "notes": "活动价，满1500减150元"
+    }
+  ],
+  "valueProposition": {
+    "pricePerformanceRatio": 9,
+    "rating": 9,
+    "strengths": [
+      "创新的同轴堆叠四腔分频技术",
+      "三颗10mm全尺寸动圈配置在同价位罕见",
+      "超低非线性失真（<0.1%），远优于多动铁和混合耳机",
+      "符合VDSF Target Response科学调音",
+      "均衡中正的音色，适应性强",
+      "优秀的做工和设计",
+      "可换线和可换插头设计，扩展性好"
+    ],
+    "weaknesses": [
+      "相比动铁耳机，体积稍大",
+      "需要一定素质的前端才能完全发挥潜力"
+    ],
+    "competitorComparison": [
+      {
+        "competitor": "森海塞尔 IE200",
+        "price": 1399,
+        "advantage": "Harmon三动圈配置更复杂，声音更饱满有力",
+        "disadvantage": "IE200更轻便"
+      },
+      {
+        "competitor": "DUNU VULKAN",
+        "price": 1699,
+        "advantage": "Harmon纯动圈失真更低，音色更自然",
+        "disadvantage": "VULKAN圈铁混合高频延伸可能更好"
+      }
+    ],
+    "recommendedFor": [
+      "追求均衡音质的发烧友",
+      "喜欢动圈自然音色的用户",
+      "需要多类型音乐兼容性的听众",
+      "预算1500-2000元的中端用户",
+      "重视科学调音和低失真的理性用户"
+    ],
+    "notRecommendedFor": [
+      "追求极致便携性的用户",
+      "偏好特定音色倾向（如重低音、女毒）的用户"
+    ]
+  },
+  "officialLinks": {
+    "productPage": "https://moondroplab.com/cn/products/harmon",
+    "manual": "https://moondroplab.com/cn/products/harmon#相关下载",
+    "support": "https://moondroplab.com/cn"
+  },
+  "metadata": {
+    "dataSource": "官方规格 + 网络测评 + 官方测量数据",
+    "lastUpdated": "2024-11-27",
+    "verifiedBy": "AI_Assistant",
+    "dataQuality": "high",
+    "notes": "基于官方页面参数、官方测量图表以及多家媒体测评综合整理。VDSF Target Response和THD数据来自官方B&K 5128测量。"
+  }
+}
+

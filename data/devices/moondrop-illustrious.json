@@ -1,0 +1,375 @@
+{
+  "deviceType": "IEM",
+  "manufacturer": "Moondrop",
+  "manufacturerCN": "水月雨",
+  "fullManufacturerCN": "成都水月雨科技有限公司",
+  "model": "ILLUSTRIOUS",
+  "modelCN": "光辉",
+  "fullName": "ILLUSTRIOUS 光辉 11mm专利动圈入耳式耳机",
+  "predecessorModel": "Illumination",
+  "series": "Flagship Series",
+  "releaseDate": "2025-04",
+  "discontinuedDate": null,
+  "countryOfOrigin": "CN",
+  "marketSegment": "Ultra-High-End",
+  "targetAudience": [
+    "Professional Audio Engineer",
+    "Studio Monitor",
+    "Critical Listening",
+    "Audiophile"
+  ],
+  "description": "Moondrop ILLUSTRIOUS（光辉）是水月雨旗舰级专业录音监听耳机，作为经典「光（Illumination）」的继任者。搭载传奇的11mm专利动圈单元和TAC钻石镀层球顶复合振膜，采用全新前腔声学结构，实现参考级低失真（THD≤0.03%）。忠实遵循DF-HRTF调音曲线，严肃还原声音本色，提供近乎毫无音染的真实音色和超规格声学性能。钛合金CNC壳体配黄铜镀金声学结构件，代表水月雨最高技术水准。",
+  "keyFeatures": [
+    "传奇的11mm专利动圈单元 - 中国实用新型专利（ZL202020277412.0）",
+    "TAC钻石镀层球顶复合振膜 - 旗舰级振膜技术",
+    "全新前腔声学结构 - 进一步优化高音平整度",
+    "DF-HRTF调音曲线 - 忠实遵循，客观平直",
+    "参考级低失真 THD≤0.03% - 专业监听级别",
+    "近乎毫无音染的真实音色 - 严肃还原声音本色",
+    "钛合金高精度CNC壳体 - 菱形切面设计，航空级材料",
+    "黄铜镀金声学结构件 - 超规格用料",
+    "可换插头设计 - 3.5mm单端/4.4mm平衡",
+    "超高灵敏度 124dB/Vrms - 极易驱动",
+    "12对耳塞套 - 豪华配件"
+  ],
+  "dimensions": {
+    "notes": "钛合金菱形切面设计，人体工学优化"
+  },
+  "weightGrams": null,
+  "buildMaterials": [
+    "钛合金高精度CNC壳体（航空级）",
+    "黄铜镀金声学结构件",
+    "TAC钻石镀层球顶复合振膜",
+    "医用级硅胶耳套"
+  ],
+  "colorOptions": [
+    "钛合金原色（菱形切面）"
+  ],
+  "specifications": {
+    "driverType": "Dynamic Driver",
+    "driverSize": {
+      "value": 11,
+      "unit": "mm"
+    },
+    "driverTechnology": "11mm专利动圈单元",
+    "driverPatent": {
+      "type": "中国实用新型专利",
+      "number": "ZL202020277412.0",
+      "description": "一种应用于入耳式耳机的电动式换能器单元",
+      "significance": "传奇的11mm专利动圈单元，水月雨经典技术"
+    },
+    "diaphragm": {
+      "type": "TAC钻石镀层球顶复合振膜",
+      "description": "Tri-Acetyl-Cellulose (TAC) 基材 + 钻石镀层球顶设计",
+      "benefits": [
+        "球顶设计实现活塞运动，减少分割振动",
+        "TAC 材料提供良好阻尼特性",
+        "钻石镀层增加刚性和高频延伸",
+        "复合结构平衡刚性与内阻尼",
+        "提升低频动态表现"
+      ]
+    },
+    "acousticDesign": {
+      "tuning": "DF-HRTF (Diffuse Field - Head-Related Transfer Function)",
+      "tuningDescription": "忠实遵循DF-HRTF的客观平直调音曲线，追求无音染的真实音色",
+      "tuningPhilosophy": "严肃还原声音本色，参考级专业旗舰续作",
+      "frontCavity": "全新前腔声学结构",
+      "frontCavityImprovement": "进一步优化高音平整度，减少高频信号衍射，提供更平滑的频率响应",
+      "tuningGoals": [
+        "近乎毫无音染的真实音色",
+        "忠实遵循DF-HRTF的客观平直",
+        "严肃还原声音本色",
+        "参考级专业录音监听体验",
+        "真实还原录音师所听到的声音"
+      ]
+    },
+    "impedance": {
+      "value": 25,
+      "tolerance": 15,
+      "unit": "Ω",
+      "frequency": 1000,
+      "notes": "低阻抗设计，适配广泛设备"
+    },
+    "sensitivity": {
+      "value": 124,
+      "unit": "dB/Vrms",
+      "frequency": 1000,
+      "notes": "超高灵敏度，极易驱动"
+    },
+    "frequencyResponse": {
+      "freeField": {
+        "minHz": 10,
+        "maxHz": 50000,
+        "range": "10Hz-50kHz",
+        "standard": "IEC61094, Free Field",
+        "notes": "自由场测量，极宽频响范围"
+      },
+      "effective": {
+        "minHz": 20,
+        "maxHz": 20000,
+        "toleranceDb": 3,
+        "range": "20Hz-20kHz (-3dB)",
+        "standard": "IEC60318-4",
+        "notes": "标准耦合腔测量，有效频响范围"
+      }
+    },
+    "thd": {
+      "value": 0.03,
+      "maxValue": 0.03,
+      "unit": "%",
+      "frequency": 1000,
+      "level": 94,
+      "levelUnit": "dB SPL",
+      "condition": "≤0.03% (@1kHz, 94dB SPL)",
+      "notes": "参考级低失真，接近实验室可测量临界值，与KADENZ同级"
+    },
+    "cableInterface": {
+      "type": "0.78mm 2-pin",
+      "recessed": true,
+      "detachable": true,
+      "notes": "通用可换线设计"
+    },
+    "cablePlugs": [
+      {
+        "type": "3.5mm TRS",
+        "standard": "单端立体声插头",
+        "interchangeable": true,
+        "included": true
+      },
+      {
+        "type": "4.4mm TRRRS",
+        "standard": "平衡立体声插头",
+        "interchangeable": true,
+        "included": true
+      }
+    ]
+  },
+  "soundSignature": {
+    "overall": "忠实遵循DF-HRTF，近乎毫无音染的真实音色",
+    "tuningTarget": "DF-HRTF (Diffuse Field - Head-Related Transfer Function)",
+    "tuningPhilosophy": "严肃还原声音本色，参考级专业录音监听，真实还原录音师所听到的声音",
+    "characterization": "近乎毫无音染的真实音色，客观平直",
+    "bass": {
+      "quantity": "准确",
+      "quality": "低频动态出色，控制力强",
+      "extension": "延伸至 10Hz（自由场）",
+      "description": "TAC钻石镀层球顶振膜提升低频动态表现，准确还原录音"
+    },
+    "midrange": {
+      "position": "中性位置",
+      "clarity": "极高透明度，无染色",
+      "vocals": "真实还原人声原本音色",
+      "timbre": "音色准确，忠实还原"
+    },
+    "treble": {
+      "extension": "延伸至 50kHz",
+      "brightness": "平滑自然",
+      "detail": "全新前腔声学结构优化高音平整度",
+      "phase": "高频平整度极佳"
+    },
+    "soundstage": {
+      "width": "自然宽广",
+      "depth": "层次清晰",
+      "imaging": "结像准确，定位精准",
+      "description": "DF-HRTF调音提供自然声场表现"
+    },
+    "resolution": "解析力顶级，得益于极低失真（≤0.03%）",
+    "dynamics": "大动态性能出色",
+    "coherence": "单动圈带来优秀的相位一致性和音色统一性",
+    "soundRestoration": "真实还原录音师所听到的声音，专业录音监听级别",
+    "idealFor": [
+      "专业录音监听",
+      "音频工程制作",
+      "批判性聆听",
+      "参考级音质追求者",
+      "需要真实无染音色的场景"
+    ],
+    "comparison": {
+      "vsKadenz": "都是THD≤0.03%，ILLUSTRIOUS采用11mm专利单元和DF-HRTF调音，定位更高端",
+      "vsIllumination": "作为Illumination的续作，优化了前腔声学结构，高音平整度进一步提升"
+    }
+  },
+  "drivingRequirements": {
+    "difficulty": "极易驱动",
+    "minimumSource": "智能手机直推优秀",
+    "recommendedSource": [
+      "高品质 DAP",
+      "专业音频接口",
+      "台式耳放",
+      "便携 USB DAC"
+    ],
+    "idealVoltage": {
+      "min": 0.3,
+      "optimal": 0.8,
+      "max": 1.5,
+      "unit": "Vrms"
+    },
+    "powerCalculation": {
+      "at1Vrms": "124dB SPL - 已超安全听音水平"
+    },
+    "sourceImpedanceRequirement": "<1Ω 输出阻抗以保证最佳频响",
+    "gainRecommendation": "低增益即可，高灵敏度设计"
+  },
+  "accessories": {
+    "included": [
+      "ILLUSTRIOUS 耳机本体 × 1 对",
+      "高品质耳机线材 × 1",
+      "3.5mm单端转接头 × 1",
+      "4.4mm平衡转接头 × 1",
+      "耳塞套 × 12 对（多种尺寸）",
+      "耳机包 × 1",
+      "佩戴示意卡 × 1",
+      "产品说明书 × 1",
+      "合格证 × 1"
+    ],
+    "highlights": [
+      "12对耳塞套 - 豪华配置",
+      "可换插头设计 - 3.5mm/4.4mm",
+      "高品质线材 - 0.78mm 2-pin",
+      "专业级配件包装"
+    ]
+  },
+  "comfortAndFit": {
+    "weight": "钛合金材质，轻量化",
+    "shellDesign": "钛合金高精度CNC壳体，菱形切面设计",
+    "cableDesign": "0.78mm 2-pin 可换线",
+    "wearStyle": "绕耳佩戴",
+    "isolationLevel": "中等",
+    "comfort": "人体工学设计，长时间佩戴舒适",
+    "notes": "航空级钛合金材质，菱形切面设计兼具美观和舒适性"
+  },
+  "technicalInnovations": [
+    {
+      "name": "传奇的11mm专利动圈单元",
+      "description": "中国实用新型专利（ZL202020277412.0），水月雨经典技术",
+      "benefit": "超规格声学性能和高扩展性"
+    },
+    {
+      "name": "TAC钻石镀层球顶复合振膜",
+      "description": "旗舰级振膜技术，与KADENZ同级",
+      "benefit": "提升低频动态表现，高频延伸出色"
+    },
+    {
+      "name": "全新前腔声学结构",
+      "description": "相比前代Illumination的改进设计",
+      "benefit": "进一步优化高音平整度，减少高频信号衍射"
+    },
+    {
+      "name": "DF-HRTF调音曲线",
+      "description": "忠实遵循DF-HRTF的客观平直调音",
+      "benefit": "近乎毫无音染的真实音色，严肃还原声音本色"
+    },
+    {
+      "name": "钛合金CNC壳体",
+      "description": "航空级钛合金材料，高精度CNC加工，菱形切面设计",
+      "benefit": "轻量化、高强度、高级质感"
+    },
+    {
+      "name": "黄铜镀金声学结构件",
+      "description": "超规格用料，内部声学结构采用黄铜镀金处理",
+      "benefit": "提升耐用性和声学性能"
+    }
+  ],
+  "pricing": [
+    {
+      "value": 4999,
+      "currency": "CNY",
+      "priceType": "MSRP",
+      "region": "CN",
+      "source": "水月雨官方旗舰店",
+      "sourceUrl": "https://moondroplab.com/cn/products/illustrious",
+      "validFrom": "2025-04",
+      "validTo": null,
+      "isOfficial": true,
+      "notes": "旗舰价格，参考级专业监听耳机"
+    }
+  },
+  "valueProposition": {
+    "pricePerformanceRatio": 7,
+    "rating": 9.5,
+    "strengths": [
+      "传奇的11mm专利动圈单元技术",
+      "TAC钻石镀层球顶振膜 - 旗舰级",
+      "THD≤0.03% - 参考级低失真",
+      "DF-HRTF调音 - 近乎毫无音染",
+      "全新前腔声学结构 - 优化高音平整度",
+      "钛合金CNC壳体 - 航空级材料",
+      "黄铜镀金声学结构件 - 超规格用料",
+      "超高灵敏度 124dB/Vrms - 极易驱动",
+      "可换插头设计 - 扩展性强",
+      "12对耳塞套 - 豪华配件",
+      "Illumination经典续作 - 传承与创新"
+    ],
+    "weaknesses": [
+      "价格昂贵 ¥4999",
+      "DF-HRTF调音偏监听，可能不够 \"讨好耳朵\"",
+      "对前端素质有一定要求才能完全发挥实力",
+      "性价比不如中端型号"
+    ],
+    "competitorComparison": [
+      {
+        "competitor": "水月雨 KADENZ 终章",
+        "price": 2599,
+        "advantage": "ILLUSTRIOUS 11mm专利单元更大，DF-HRTF调音，钛合金壳体，定位更高端",
+        "disadvantage": "KADENZ 性价比更高，VDSF调音也很优秀"
+      },
+      {
+        "competitor": "森海塞尔 IE900",
+        "price": 12999,
+        "advantage": "ILLUSTRIOUS 价格便宜 ¥8000，单动圈vs多单元，调音更中性",
+        "disadvantage": "IE900 品牌溢价，多单元配置"
+      },
+      {
+        "competitor": "qdc 8SL",
+        "price": 8999,
+        "advantage": "ILLUSTRIOUS 价格便宜，单动圈相位一致性更好",
+        "disadvantage": "8SL 多单元解析力可能更强"
+      }
+    ],
+    "recommendedFor": [
+      "专业音频工程师",
+      "录音师和混音师",
+      "追求极致准确音色的发烧友",
+      "需要参考级监听的用户",
+      "预算充足的旗舰级用户",
+      "Illumination老用户升级",
+      "重视钛合金工艺和顶级用料的玩家"
+    ],
+    "notRecommendedFor": [
+      "预算有限的用户（性价比不如KADENZ/KATO）",
+      "追求音乐性和感染力的娱乐向用户",
+      "偏好特定音色倾向（如重低音、女毒）的用户",
+      "入门发烧友"
+    ]
+  },
+  "officialLinks": {
+    "productPage": "https://moondroplab.com/cn/products/illustrious",
+    "manual": "https://moondroplab.com/cn/products/illustrious#相关下载",
+    "support": "https://moondroplab.com/cn"
+  },
+  "awards": [],
+  "usageTips": [
+    "选择合适尺寸的耳套（提供12对）以确保最佳密封性",
+    "使用低增益设置，124dB/Vrms灵敏度极高",
+    "搭配输出阻抗 <1Ω 的高品质前端设备",
+    "DF-HRTF调音偏监听，适合批判性聆听",
+    "钛合金壳体轻拿轻放，避免刮擦",
+    "定期清洁黄铜镀金声学结构件"
+  ],
+  "maintenanceNotes": [
+    "定期清洁耳机导管和黄铜镀金部件",
+    "钛合金壳体避免硬物刮擦",
+    "保持 0.78mm 2-pin 接口清洁干燥",
+    "线材轻拿轻放，避免过度弯折",
+    "妥善收纳在随附的耳机包中",
+    "定期检查可换插头连接"
+  ],
+  "metadata": {
+    "dataSource": "官方网站 + 网络测评",
+    "lastUpdated": "2024-11-27",
+    "verifiedBy": "AI_Assistant",
+    "dataQuality": "high",
+    "notes": "ILLUSTRIOUS是水月雨旗舰级专业监听耳机，Illumination的续作。采用传奇的11mm专利动圈单元、TAC钻石镀层球顶振膜、全新前腔声学结构，忠实遵循DF-HRTF调音曲线。钛合金CNC壳体+黄铜镀金声学结构件，代表水月雨最高技术水准。THD≤0.03%，与KADENZ同级失真，但定位更高端（¥4999 vs ¥2599）。"
+  }
+}
+
