@@ -427,7 +427,7 @@
     "images": {
       "productMain": "data/devices/images/hiby-fc5/fc5-product-main.png",
       "eqPresets": "data/devices/images/hiby-fc5/eq-presets-overview.png",
-      "customPEQCurve": "data/devices/images/hiby-fc5/custom-peq-work-mode.png (待添加)",
+      "customPEQCurve": "data/devices/images/hiby-fc5/custom-peq-work-mode.png",
       "description": "产品图片、EQ 预设频响曲线总览和自定义工作模式 PEQ 曲线"
     },
     
