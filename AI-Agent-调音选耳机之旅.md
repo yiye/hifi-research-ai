@@ -4,7 +4,7 @@
 
 **作者**：yiye  
 **设备**：MacBook Pro M4 Pro + HiBy FC5 + DUNU VULKAN2  
-**时间跨度**：2024-11-24 至 2024-11-27  
+**时间跨度**：2025-11-24 至 2025-11-27  
 **调音版本**：v1.0 → v1.5（5次迭代）
 
 ---
@@ -486,5 +486,5 @@ VULKAN2 是好耳机，但原生调音不适合我：
 
 **配置文件**：[my-macbook-setup.json](data/setups/my-macbook-setup.json)  
 **项目地址**：[hifi-research](https://github.com/yiye/hifi-research-ai)  
-**最后更新**：2024-11-27
+**最后更新**：2025-11-27
 

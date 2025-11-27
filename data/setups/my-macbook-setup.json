@@ -1,7 +1,7 @@
 {
   "setupName": "MacBook Pro M4 Pro + HiBy FC5 + VULKAN2 配置",
-  "createdDate": "2024-11-24",
-  "lastUpdated": "2024-11-24",
+  "createdDate": "2025-11-24",
+  "lastUpdated": "2025-11-27",
   "owner": "yiye",
   "description": "MacBook Pro M4 Pro 通过 HiBy FC5 USB 解码器驱动达音科 VULKAN2 耳机的播放系统",
   
@@ -804,14 +804,14 @@
   
   "metadata": {
     "configVersion": "1.5",
-    "lastReviewed": "2024-11-27",
-    "lastUpdated": "2024-11-27",
+    "lastReviewed": "2025-11-27",
+    "lastUpdated": "2025-11-27",
     "dataQuality": "high",
     "notes": "基于官方规格、产品铭牌、频响曲线图和实际使用经验创建，针对编程工作场景深度优化",
     "changeLog": [
       {
         "version": "1.5",
-        "date": "2024-11-27",
+        "date": "2025-11-27",
         "changes": [
           "添加「工作模式」PEQ 配置：针对长时间编程听音优化 ⭐",
           "新增 Band8: 4kHz High Shelf -1.0dB（整体高频柔化）",
@@ -825,7 +825,7 @@
       },
       {
         "version": "1.4",
-        "date": "2024-11-27",
+        "date": "2025-11-27",
         "changes": [
           "配置自定义 PEQ 完美解决齿音问题",
           "硬件 EQ 改为 OFF，使用精确 PEQ（6kHz -2.5dB, 8kHz -2.0dB）",
@@ -838,7 +838,7 @@
       },
       {
         "version": "1.3",
-        "date": "2024-11-27",
+        "date": "2025-11-27",
         "changes": [
           "齿音控制优化：Vocal EQ → Pop EQ",
           "用户实测发现 Vocal 预设增强 2-6kHz 导致齿音明显",
@@ -850,7 +850,7 @@
       },
       {
         "version": "1.2",
-        "date": "2024-11-24",
+        "date": "2025-11-24",
         "changes": [
           "进一步优化：Slow Highpass → Fast Highpass",
           "用户实际对比发现 Fast Highpass 更好听",
@@ -862,7 +862,7 @@
       },
       {
         "version": "1.1",
-        "date": "2024-11-24",
+        "date": "2025-11-24",
         "changes": [
           "根据用户实际听感更新滤波器设置：Slow Lowpass → Slow Highpass",
           "添加用户听感偏好档案（高频敏感型）",
@@ -872,7 +872,7 @@
       },
       {
         "version": "1.0",
-        "date": "2024-11-24",
+        "date": "2025-11-24",
         "changes": [
           "初始配置创建"
         ]
