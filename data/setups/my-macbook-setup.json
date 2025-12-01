@@ -308,56 +308,112 @@
           "supported": true,
           "tools": ["HiByUSBMaster (Windows/Mac)", "HiByMusic App (Android)"],
           "configured": false,
-          "presetName": "KADENZ 无需 PEQ",
-          "description": "KADENZ 单动圈调音准确，THD ≤0.03%，无齿音问题，无需自定义 PEQ。保持原声以充分体验 VDSF 调音的准确性",
+          "presetName": "工作模式 - 编程听歌专用（VULKAN 2 专用，仅作参考保留）",
+          "description": "⚠️ 此配置为 VULKAN 2 设计，针对圈铁耳机的齿音控制。KADENZ 单动圈调音准确，无需任何 PEQ，保持原声即可",
           "version": "3.0",
-          "bands": [],
-          "bandsNotes": "KADENZ 无需 PEQ，所有频段保持关闭状态",
+          "kadenzNote": "KADENZ 使用时请保持此 PEQ 关闭（configured: false），以下参数仅作历史参考",
+          "bands": [
+            {
+              "band": "Band6",
+              "enabled": false,
+              "type": "Peaking",
+              "frequency": 6000,
+              "unit": "Hz",
+              "q": 2.0,
+              "gain": -2.5,
+              "gainUnit": "dB",
+              "purpose": "主要齿音频段衰减（5-7kHz）- VULKAN 2 专用",
+              "kadenzNote": "KADENZ 无需此频段调整，TAC 振膜高频自然"
+            },
+            {
+              "band": "Band7",
+              "enabled": false,
+              "type": "Peaking",
+              "frequency": 8000,
+              "unit": "Hz",
+              "q": 2.5,
+              "gain": -2.0,
+              "gainUnit": "dB",
+              "purpose": "高频齿音频段衰减（7-9kHz）- VULKAN 2 专用",
+              "kadenzNote": "KADENZ 此频段已完美，单动圈相位一致性好"
+            },
+            {
+              "band": "Band8",
+              "enabled": false,
+              "type": "High Shelf",
+              "frequency": 4000,
+              "unit": "Hz",
+              "q": 0.7,
+              "gain": -1.0,
+              "gainUnit": "dB",
+              "purpose": "整体高频柔化（4kHz 以上）- VULKAN 2 专用",
+              "kadenzNote": "KADENZ VDSF 调音已最优，无需任何 Shelf"
+            }
+          ],
           "frequencyResponse": {
-            "overall": "完全平坦的 VDSF 目标曲线，无任何 EQ 调整",
-            "bass": "20Hz-200Hz 准确平衡，下潜深",
-            "midrange": "200Hz-4kHz 完全平坦，人声清晰自然",
-            "treble": "4kHz+ 自然延伸，单动圈天然柔和",
-            "summary": "KADENZ 的 VDSF 调音已经极其准确，无需任何 EQ"
+            "note": "⚠️ 以下是 VULKAN 2 的 PEQ 频响，KADENZ 使用原声（0dB 全频段）",
+            "bass": "20Hz-1kHz 保持平坦（±0.5dB）",
+            "midrange": "1kHz-4kHz 完全平坦（0dB），人声清晰自然",
+            "treble": "4kHz+ 温和下降（-1.0dB High Shelf）",
+            "sibilance": "6kHz 处凹陷约 -3.5dB，8kHz 处凹陷约 -3.0dB",
+            "airiness": "10kHz+ 略微回升，保留空气感",
+            "overall": "平滑自然的下降曲线，无突兀起伏，极佳的长时间耐听性"
           },
           "testTracks": [
-            "贝多芬 - 第九交响曲（测试古典音乐的准确性）",
-            "Bill Evans - Waltz for Debby（测试爵士的音色准确性）",
-            "Yosi Horikawa - Letter（测试声场和定位）",
-            "Nils Frahm - Says（测试钢琴的真实感）"
+            "Taylor Swift - Shake It Off（英文女声，齿音明显）",
+            "邓紫棋 - 泡沫（中文女声高音，齿音清晰）",
+            "Billie Eilish - bad guy（近距离录音，极端测试）",
+            "周杰伦 - 夜曲（RAP 齿音密集）"
           ],
-          "result": "KADENZ 无需 PEQ，原声即完美。单动圈音色统一自然，长时间聆听不疲劳",
+          "result": "⚠️ VULKAN 2：齿音完美控制，高频柔和耐听 | ✅ KADENZ：原声即完美，无需 PEQ",
           "useCases": {
-            "primary": "批判性聆听和专业监听（主要用途）⭐⭐⭐⭐⭐",
+            "primary": "KADENZ 批判性聆听和专业监听（主要用途）⭐⭐⭐⭐⭐",
             "suitable": [
-              "批判性聆听古典音乐",
-              "爵士乐欣赏",
-              "音频工程参考监听",
-              "长时间工作听音（编程、写作）",
-              "需要准确音色的场景"
+              "KADENZ：古典音乐、爵士乐、器乐独奏",
+              "KADENZ：音频工程参考监听",
+              "KADENZ：长时间工作听音（编程、写作）",
+              "历史参考：VULKAN 2 的齿音控制方案"
             ],
             "musicTypes": [
-              "古典音乐（最佳）⭐",
-              "爵士乐、蓝调",
-              "器乐独奏（钢琴、小提琴等）",
-              "室内乐、弦乐四重奏",
-              "现场录音",
-              "任何需要准确还原的音乐"
+              "KADENZ 最佳：古典音乐、爵士乐、室内乐",
+              "KADENZ 适合：任何需要准确还原的音乐",
+              "历史：VULKAN 2 + PEQ 适合流行、摇滚"
             ]
           },
-          "alternatives": "KADENZ 使用原声即可，无需任何替代方案"
+          "alternatives": {
+            "kadenz": {
+              "name": "KADENZ 原声模式（推荐）",
+              "bands": "全部关闭（enabled: false）",
+              "purpose": "✅ 当前配置，VDSF 调音完美，无需任何 EQ"
+            },
+            "vulkan2Reference": {
+              "name": "VULKAN 2 工作模式（历史参考）",
+              "bands": "Band6/7/8 全部启用",
+              "purpose": "仅作参考，记录之前的调音经验"
+            }
+          }
         },
-        "kadenzNotes": {
-          "whyNoPEQ": "KADENZ 是旗舰级监听耳机，THD ≤0.03%，调音基于科学的 VDSF 目标曲线，无齿音问题，任何 EQ 调整都会破坏其准确性",
-          "advantages": [
-            "单动圈相位一致性极佳",
-            "TAC 钻石镀层振膜，高频自然柔和",
-            "VDSF 调音准确平衡",
-            "无需任何 EQ 即可长时间耐听"
-          ],
-          "vsVulkan2": {
-            "vulkan2Issue": "圈铁耳机，四动铁高频略刺激，需要 PEQ 控制齿音",
-            "kadenzSolution": "单动圈天然柔和，高频自然延伸，无齿音问题"
+        "sibilanceControl": {
+          "current": {
+            "device": "KADENZ 终章",
+            "solution": "✅ 无需任何处理，单动圈 + TAC 振膜 + VDSF 调音 = 完美高频",
+            "thdComparison": "VULKAN 2: 0.3% → KADENZ: ≤0.03%（低 10 倍）"
+          },
+          "history": {
+            "device": "VULKAN 2（已售出）",
+            "issue": "圈铁耳机，四动铁高频略刺激，齿音明显（5-10kHz）",
+            "evolution": [
+              {
+                "stage": 1,
+                "solution": "Vocal EQ → Pop EQ",
+                "effect": "齿音减少，但仍不够精确"
+              },
+              {
+                "stage": 2,
+                "solution": "自定义 PEQ（6kHz -2.5dB, 8kHz -2.0dB）",
+                "effect": "✅ 齿音完美控制，音质无损"
+              }
+            ]
           }
         }
       }
