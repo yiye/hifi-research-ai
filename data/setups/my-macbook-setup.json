@@ -1,9 +1,9 @@
 {
-  "setupName": "MacBook Pro M4 Pro + HiBy FC5 + VULKAN2 配置",
+  "setupName": "MacBook Pro M4 Pro + HiBy FC5 + KADENZ 配置",
   "createdDate": "2025-11-24",
-  "lastUpdated": "2025-11-27",
+  "lastUpdated": "2024-11-27",
   "owner": "yiye",
-  "description": "MacBook Pro M4 Pro 通过 HiBy FC5 USB 解码器驱动达音科 VULKAN2 耳机的播放系统",
+  "description": "MacBook Pro M4 Pro 通过 HiBy FC5 USB 解码器驱动水月雨 KADENZ（终章）耳机的播放系统 - 旗舰级单动圈监听耳机",
   
   "source": {
     "deviceType": "Computer",
@@ -136,7 +136,7 @@
         "description": "增益设置",
         "options": ["High", "Middle", "Low"],
         "currentSetting": "Low",
-        "notes": "根据耳机灵敏度选择，VULKAN2 灵敏度高（113dB/mW），建议使用 Low 增益"
+        "notes": "根据耳机灵敏度选择，KADENZ 灵敏度极高（122dB/Vrms），建议使用 Low 增益"
       },
       
       "filter": {
@@ -149,7 +149,7 @@
           "Slow Highpass"
         ],
         "currentSetting": "Fast Highpass",
-        "notes": "用户最终选择 Fast Highpass（最小相位 + 急剧滚降）：既无预振铃的刺激感，又保留完整的高频延伸和细节。相比 Slow Highpass 的高频衰减，Fast Highpass 在 20kHz 内更平坦，让 VULKAN2 发挥完整实力但不刺耳"
+        "notes": "用户最终选择 Fast Highpass（最小相位 + 急剧滚降）：既无预振铃的刺激感，又保留完整的高频延伸和细节。KADENZ 单动圈高频本身就很自然柔和，Fast Highpass 进一步优化瞬态响应"
       },
       
       "eq": {
@@ -168,7 +168,7 @@
           "Metal"
         ],
         "currentSetting": "OFF",
-        "notes": "已使用自定义 PEQ 精确控制齿音，硬件 EQ 设为 OFF 避免叠加。历史：Vocal 增强 2-6kHz 导致齿音明显 → Pop 改善但不够精确 → 自定义 PEQ 完美解决",
+        "notes": "KADENZ 单动圈调音准确中性，无需 EQ 调整。保持 OFF 以获得最纯净的 VDSF 目标曲线。历史：VULKAN2 时期需要 PEQ 控制齿音，KADENZ 无此问题",
         "presetDetails": {
           "OFF": {
             "name": "Original",
@@ -191,7 +191,7 @@
             "trebleResponse": "高频适度提升",
             "suitableFor": "流行人声、ACG、广播节目、有声书",
             "sibilance": "❌ 高（增强 2-6kHz 包含齿音频段）",
-            "warnings": "⚠️ 与 VULKAN2 搭配会导致齿音明显，不推荐",
+            "warnings": "⚠️ 增强中高频，可能导致齿音（KADENZ 无此问题，但仍不建议使用以保持原声）",
             "icon": "🎤"
           },
           "Bass": {
@@ -205,7 +205,7 @@
             "trebleResponse": "高频基本平坦",
             "suitableFor": "电音、Hip-Hop、低频不足的耳机",
             "sibilance": "低（不影响高频）",
-            "warnings": "⚠️ VULKAN2 低频已足够，不建议使用",
+            "warnings": "⚠️ KADENZ 低频准确平衡，不建议使用",
             "icon": "🔊"
           },
           "Treble": {
@@ -219,7 +219,7 @@
             "trebleResponse": "高频大幅提升",
             "suitableFor": "高频暗淡的耳机、古典音乐（需要空气感）",
             "sibilance": "❌ 极高（大幅增强齿音频段）",
-            "warnings": "⚠️ VULKAN2 高频已足够，会导致严重齿音，不推荐",
+            "warnings": "⚠️ KADENZ 高频自然平滑，无需额外提升",
             "icon": "✨"
           },
           "Pop": {
@@ -307,110 +307,57 @@
         "customPEQ": {
           "supported": true,
           "tools": ["HiByUSBMaster (Windows/Mac)", "HiByMusic App (Android)"],
-          "configured": true,
-          "presetName": "工作模式 - 编程听歌专用",
-          "description": "针对 VULKAN2 的精确齿音控制 + 高频整体柔化，适合长时间编程工作时听音",
-          "version": "2.0",
-          "bands": [
-            {
-              "band": "Band6",
-              "enabled": true,
-              "type": "Peaking",
-              "frequency": 6000,
-              "unit": "Hz",
-              "q": 2.0,
-              "gain": -2.5,
-              "gainUnit": "dB",
-              "purpose": "主要齿音频段衰减（5-7kHz）"
-            },
-            {
-              "band": "Band7",
-              "enabled": true,
-              "type": "Peaking",
-              "frequency": 8000,
-              "unit": "Hz",
-              "q": 2.5,
-              "gain": -2.0,
-              "gainUnit": "dB",
-              "purpose": "高频齿音频段衰减（7-9kHz）"
-            },
-            {
-              "band": "Band8",
-              "enabled": true,
-              "type": "High Shelf",
-              "frequency": 4000,
-              "unit": "Hz",
-              "q": 0.7,
-              "gain": -1.0,
-              "gainUnit": "dB",
-              "purpose": "整体高频柔化（4kHz 以上），提升耐听度，适合长时间工作听音"
-            }
-          ],
+          "configured": false,
+          "presetName": "KADENZ 无需 PEQ",
+          "description": "KADENZ 单动圈调音准确，THD ≤0.03%，无齿音问题，无需自定义 PEQ。保持原声以充分体验 VDSF 调音的准确性",
+          "version": "3.0",
+          "bands": [],
+          "bandsNotes": "KADENZ 无需 PEQ，所有频段保持关闭状态",
           "frequencyResponse": {
-            "bass": "20Hz-1kHz 保持平坦（±0.5dB）",
-            "midrange": "1kHz-4kHz 完全平坦（0dB），人声清晰自然",
-            "treble": "4kHz+ 温和下降（-1.0dB High Shelf）",
-            "sibilance": "6kHz 处凹陷约 -3.5dB，8kHz 处凹陷约 -3.0dB",
-            "airiness": "10kHz+ 略微回升，保留空气感",
-            "overall": "平滑自然的下降曲线，无突兀起伏，极佳的长时间耐听性"
+            "overall": "完全平坦的 VDSF 目标曲线，无任何 EQ 调整",
+            "bass": "20Hz-200Hz 准确平衡，下潜深",
+            "midrange": "200Hz-4kHz 完全平坦，人声清晰自然",
+            "treble": "4kHz+ 自然延伸，单动圈天然柔和",
+            "summary": "KADENZ 的 VDSF 调音已经极其准确，无需任何 EQ"
           },
           "testTracks": [
-            "Taylor Swift - Shake It Off（英文女声，齿音明显）",
-            "邓紫棋 - 泡沫（中文女声高音，齿音清晰）",
-            "Billie Eilish - bad guy（近距离录音，极端测试）",
-            "周杰伦 - 夜曲（RAP 齿音密集）"
+            "贝多芬 - 第九交响曲（测试古典音乐的准确性）",
+            "Bill Evans - Waltz for Debby（测试爵士的音色准确性）",
+            "Yosi Horikawa - Letter（测试声场和定位）",
+            "Nils Frahm - Says（测试钢琴的真实感）"
           ],
-          "result": "齿音完美控制，高频柔和耐听，音乐性保留完好，非常适合边写代码边听歌",
+          "result": "KADENZ 无需 PEQ，原声即完美。单动圈音色统一自然，长时间聆听不疲劳",
           "useCases": {
-            "primary": "编程工作时长时间听音（主要用途）⭐⭐⭐",
+            "primary": "批判性聆听和专业监听（主要用途）⭐⭐⭐⭐⭐",
             "suitable": [
-              "深度思考写代码",
-              "日常开发调试",
-              "长时间工作（6-8小时+）",
-              "需要专注但又想享受音乐"
+              "批判性聆听古典音乐",
+              "爵士乐欣赏",
+              "音频工程参考监听",
+              "长时间工作听音（编程、写作）",
+              "需要准确音色的场景"
             ],
             "musicTypes": [
-              "纯音乐/器乐（最佳）",
-              "Lo-Fi Hip Hop",
-              "轻音乐/New Age",
-              "古典音乐（巴洛克、室内乐）",
-              "电子氛围音乐（Ambient, Chillout）",
-              "日系 ACG 纯音乐"
+              "古典音乐（最佳）⭐",
+              "爵士乐、蓝调",
+              "器乐独奏（钢琴、小提琴等）",
+              "室内乐、弦乐四重奏",
+              "现场录音",
+              "任何需要准确还原的音乐"
             ]
           },
-          "alternatives": {
-            "pureListening": {
-              "name": "纯净模式",
-              "bands": "只保留 Band6/Band7（齿音控制），关闭 Band8",
-              "purpose": "专心听音乐时使用，音乐性更强"
-            },
-            "deepFocus": {
-              "name": "深度专注模式",
-              "modification": "Band8 Gain 改为 -1.5dB",
-              "purpose": "需要高度专注时，音乐完全退到背景"
-            }
-          }
+          "alternatives": "KADENZ 使用原声即可，无需任何替代方案"
         },
-        "sibilanceControl": {
-          "issue": "VULKAN2 人声靠前 + 四动铁高频 + 中高频增强 = 齿音明显（5-10kHz）",
-          "evolution": [
-            {
-              "stage": 1,
-              "solution": "Vocal EQ → Pop EQ",
-              "effect": "齿音减少，但仍不够精确"
-            },
-            {
-              "stage": 2,
-              "solution": "自定义 PEQ（6kHz -2.5dB, 8kHz -2.0dB）",
-              "effect": "✅ 齿音完美控制，音质无损"
-            }
+        "kadenzNotes": {
+          "whyNoPEQ": "KADENZ 是旗舰级监听耳机，THD ≤0.03%，调音基于科学的 VDSF 目标曲线，无齿音问题，任何 EQ 调整都会破坏其准确性",
+          "advantages": [
+            "单动圈相位一致性极佳",
+            "TAC 钻石镀层振膜，高频自然柔和",
+            "VDSF 调音准确平衡",
+            "无需任何 EQ 即可长时间耐听"
           ],
-          "currentSolution": "自定义 PEQ + 硬件 EQ OFF",
-          "technicalDetails": {
-            "sibilanceFrequency": "5-10kHz（人声齿音主要频段）",
-            "targetFrequencies": ["6kHz（主要齿音）", "8kHz（高频齿音）"],
-            "attenuationAmount": "-2.0 到 -2.5dB（精确控制，不过度衰减）",
-            "qFactor": "2.0-2.5（窄带衰减，不影响其他频率）"
+          "vsVulkan2": {
+            "vulkan2Issue": "圈铁耳机，四动铁高频略刺激，需要 PEQ 控制齿音",
+            "kadenzSolution": "单动圈天然柔和，高频自然延伸，无齿音问题"
           }
         }
       }
@@ -447,107 +394,158 @@
   
   "transducer": {
     "deviceType": "IEM",
-    "manufacturer": "DUNU",
-    "manufacturerCN": "达音科",
-    "fullManufacturerCN": "东莞达音电子有限公司",
-    "model": "VULKAN 2",
-    "modelCN": "曜",
-    "series": "VULKAN",
+    "manufacturer": "MOONDROP",
+    "manufacturerCN": "水月雨",
+    "fullManufacturerCN": "成都水月雨科技有限公司",
+    "model": "KADENZ",
+    "modelCN": "终章",
+    "series": "Flagship Series",
     
-    "description": "八单元圈铁混合入耳式监听耳机（双动圈六动铁），针对流行人声优化",
+    "description": "旗舰级 10mm 单动圈入耳式监听耳机，采用第二代专利超线性动圈单元和 TAC 钻石镀层球顶复合振膜，基于 VDSF 目标曲线调音",
     
     "specifications": {
       "driverConfiguration": {
-        "total": 8,
-        "dynamicDrivers": 2,
-        "balancedArmatures": 6,
-        "description": "双动圈六动铁八单元混合架构",
-        "detail": {
-          "subBass": "独立极低频动圈 × 1",
-          "bass": "独立低频动圈 × 1",
-          "midrange": "定制楼氏中频动铁 × 2",
-          "treble": "定制高频极高频动铁 × 4"
+        "total": 1,
+        "type": "Single Dynamic Driver",
+        "size": 10,
+        "unit": "mm",
+        "description": "第二代专利超线性动圈单元",
+        "patent": {
+          "type": "中国实用新型专利",
+          "number": "ZL 202321416216.7",
+          "description": "一种用于入耳式耳机的高性能10mm动圈式换能器"
+        },
+        "diaphragm": {
+          "type": "TAC 钻石镀层球顶复合振膜",
+          "description": "Tri-Acetyl-Cellulose (TAC) 基材 + 钻石镀层球顶设计"
         }
       },
       
+      "tuning": {
+        "targetCurve": "VDSF (Virtual Diffuse Sound Field)",
+        "description": "基于 HRTF（头部相关传递函数）和理想房间偏好制作的目标曲线",
+        "characteristics": "基于 VDSF 目标曲线，追求准确、自然、均衡的声音重放"
+      },
+      
       "frequencyResponse": {
-        "minHz": 5,
-        "maxHz": 40000,
-        "range": "5Hz-40kHz",
-        "description": "超宽频响范围，覆盖人耳可听范围及超高频",
-        "signature": "饱满温润且细腻耐听的调音，搭配两圈六铁八单元的强悍素质基底",
+        "freeField": {
+          "minHz": 8,
+          "maxHz": 21000,
+          "range": "8Hz-21kHz",
+          "standard": "IEC61094, Free Field"
+        },
+        "effective": {
+          "minHz": 20,
+          "maxHz": 20000,
+          "toleranceDb": 3,
+          "range": "20Hz-20kHz (-3dB)",
+          "standard": "IEC60318-4"
+        },
+        "signature": "中性偏监听，能量分布均衡，准确还原录音意图",
         "characteristics": [
-          "高密度",
-          "大声场",
-          "人声饱满靠前",
-          "层次清晰"
+          "准确中性",
+          "音色真实",
+          "结像清晰",
+          "极低失真"
         ],
         "suitableGenres": [
-          "流行",
-          "人声",
-          "摇滚",
-          "J-POP",
-          "ACG"
+          "古典音乐",
+          "爵士乐",
+          "器乐独奏",
+          "批判性聆听",
+          "专业监听"
         ]
       },
       
       "impedance": {
         "value": 35,
+        "tolerance": 15,
         "unit": "Ω",
-        "notes": "中等阻抗，易于驱动"
+        "frequency": 1000,
+        "notes": "中等阻抗，适配移动和桌面设备"
       },
       
       "sensitivity": {
-        "dbPerMw": {
-          "value": 113,
-          "unit": "dB/mW",
-          "frequency": 1000,
-          "notes": "高灵敏度，容易驱动"
-        },
         "dbPerVrms": {
-          "value": 128,
+          "value": 122,
           "unit": "dB/Vrms",
-          "frequency": 1000
+          "frequency": 1000,
+          "notes": "高灵敏度，极易驱动"
         }
       },
       
       "thd": {
-        "value": 0.3,
+        "value": 0.03,
+        "maxValue": 0.03,
         "unit": "%",
         "frequency": 1000,
-        "condition": "< 0.3% (@1kHz)"
+        "level": 94,
+        "levelUnit": "dB SPL",
+        "condition": "≤0.03% (@1kHz, 94dB SPL)",
+        "notes": "超低失真，接近实验室可测量临界值，比常规 IEM 低 10-30 倍"
       },
       
-      "bodyMaterial": "航空级铝合金",
+      "interchangeableTubes": {
+        "supported": true,
+        "tubeTypes": ["A", "B", "C"],
+        "description": "可更换导管设计，适配不同耳道声学耦合",
+        "currentTube": "B（默认）"
+      },
+      
+      "bodyMaterial": "精密注塑树脂腔体 + 金属导管",
       "weight": {
         "value": 8,
         "unit": "g",
-        "perSide": true
+        "perSide": true,
+        "notes": "单侧耳机重量（不含线材）"
       }
     },
     
     "cable": {
-      "type": "4股高纯度单晶铜镀银线",
-      "structure": "Litz 结构",
+      "type": "高纯度无氧铜线",
+      "conductor": "OFC (Oxygen-Free Copper)",
+      "strands": 4,
       "length": {
         "value": 1.2,
-        "tolerance": 0.1,
         "unit": "m"
       },
       "connector": {
-        "earpiece": "专利膨胀式 MMCX 插针",
-        "plug": "Q-Lock Mini 可换插头设计",
+        "earpiece": "0.78mm 2-pin",
+        "plug": "可换插头设计",
         "includedPlugs": [
-          "4.4mm 平衡插头",
-          "3.5mm 单端插头"
+          "3.5mm TRS 单端插头",
+          "4.4mm TRRRS 平衡插头（配备）"
         ]
-      }
+      },
+      "detachable": true,
+      "notes": "标配可换插头高品质耳机线，兼容第三方升级线材"
+    },
+    
+    "includedAccessories": {
+      "cable": "标配耳机线 × 1（可换插头）",
+      "dacCable": "4.4mm 全平衡 C 口解码耳放线 × 1",
+      "tubes": "可换导管 (A/B/C) × 3",
+      "earTips": [
+        "普通硅胶耳套 (S/M/L)",
+        "清泉套 (S/M/L) - 高端硅胶耳套"
+      ],
+      "case": "便携皮包",
+      "others": ["说明书", "服务卡", "合格证"]
     },
     
     "currentConnection": {
       "plugType": "4.4mm Balanced",
       "dacOutput": "BAL (4.4mm)",
-      "notes": "使用平衡接口获得更好的分离度和动态"
+      "notes": "使用平衡接口获得更好的分离度和声场"
+    },
+    
+    "purchaseInfo": {
+      "purchaseDate": "2024-11-27",
+      "price": 790,
+      "currency": "CNY",
+      "originalPrice": 2599,
+      "discount": "3折清仓价",
+      "notes": "原价 ¥2599，清仓价 ¥790，性价比极高"
     }
   },
   
@@ -581,13 +579,13 @@
       },
       {
         "stage": 4,
-        "component": "VULKAN 2",
+        "component": "KADENZ 终章",
         "role": "电声转换 (Transducer)",
         "process": [
-          "极低频动圈",
-          "低频动圈",
-          "中频动铁 × 2",
-          "高频动铁 × 4"
+          "10mm 第二代专利超线性动圈单元",
+          "TAC 钻石镀层球顶复合振膜",
+          "单动圈 - 相位一致性极佳",
+          "THD ≤0.03% - 接近实验室级失真"
         ],
         "output": "声波 (Sound Waves)"
       }
@@ -601,72 +599,63 @@
   },
   
   "recommendedSettings": {
-    "description": "针对 VULKAN2 的推荐设置（基于用户听感偏好和自定义 PEQ）",
-    "notes": "已配置自定义 PEQ 精确控制齿音，所有场景硬件 EQ 建议设为 OFF，由 PEQ 统一处理",
+    "description": "针对 KADENZ 的推荐设置（基于用户听感偏好）",
+    "notes": "KADENZ 单动圈调音准确，无需 PEQ。所有场景保持 EQ OFF，充分体验 VDSF 调音的准确性和单动圈的自然音色",
     "settings": [
       {
-        "scenario": "工作模式 - 编程听歌（用户最佳设置）⭐⭐⭐⭐⭐",
+        "scenario": "日常监听模式（最佳设置）⭐⭐⭐⭐⭐",
         "gain": "Low",
         "filter": "Fast Highpass",
         "eq": "OFF",
-        "peq": "工作模式（6kHz -2.5dB, 8kHz -2.0dB, 4kHz High Shelf -1.0dB）",
-        "volume": "30-50% (编程时建议略低)",
-        "reason": "最终最佳设置：无预振铃 + 齿音完美控制 + 高频整体柔化 = 超强耐听度，适合长时间工作（6-8小时）听音，音乐不分散注意力又能享受",
-        "userFeedback": "听感好很多，也耐听多了"
+        "peq": "OFF（无需 PEQ）",
+        "volume": "30-50%",
+        "reason": "KADENZ 原声即完美：VDSF 调音准确、THD ≤0.03% 极低失真、单动圈音色自然。Fast Highpass 无预振铃，保留完整高频细节。适合所有场景",
+        "userFeedback": "单动圈音色统一自然，比圈铁更柔和耐听，无齿音问题"
       },
       {
-        "scenario": "纯听音乐模式",
+        "scenario": "古典音乐欣赏（强烈推荐）⭐⭐⭐⭐⭐",
         "gain": "Low",
         "filter": "Fast Highpass",
         "eq": "OFF",
-        "peq": "纯净模式（只启用 Band6/Band7，关闭 Band8）",
-        "volume": "40-60%",
-        "reason": "专心听音乐时使用，关闭 High Shelf 保留更多高频细节和音乐性，但依然保留齿音控制"
-      },
-      {
-        "scenario": "深度专注编程",
-        "gain": "Low",
-        "filter": "Fast Highpass",
-        "eq": "OFF",
-        "peq": "深度专注模式（Band8 Gain 改为 -1.5dB）",
-        "volume": "25-40%",
-        "reason": "需要高度专注时，音乐更柔和，完全退到背景，不干扰思维"
-      },
-      {
-        "scenario": "古典音乐",
-        "gain": "Middle",
-        "filter": "Fast Highpass",
-        "eq": "OFF",
-        "peq": "齿音消除预设",
-        "volume": "45-65%",
-        "reason": "完整的高频延伸保留乐器泛音和音乐厅空间感，无预振铃的自然瞬态，PEQ 不影响古典音乐的自然音色"
-      },
-      {
-        "scenario": "摇滚/金属",
-        "gain": "Low",
-        "filter": "Fast Highpass",
-        "eq": "OFF",
-        "peq": "齿音消除预设",
-        "volume": "50-70%",
-        "reason": "快速最小相位提供强劲瞬态，钹片清脆、吉他失真质感好，冲击力强但不刺激。PEQ 避免高频齿音疲劳"
-      },
-      {
-        "scenario": "纯净监听",
-        "gain": "Low",
-        "filter": "Fast Highpass",
-        "eq": "OFF",
-        "peq": "可选（齿音不敏感可关闭）",
-        "volume": "按需调整",
-        "reason": "Fast Highpass 提供最接近原始调音的自然声音（20kHz 内 ±0.1dB）。如需绝对原声可关闭 PEQ"
-      },
-      {
-        "scenario": "无 PEQ 兼容模式（备选）",
-        "gain": "Low",
-        "filter": "Fast Highpass",
-        "eq": "Pop",
         "peq": "OFF",
-        "volume": "40-60%",
-        "reason": "如果无法使用 PEQ（如更换设备），Pop 预设是次优选择，齿音控制不如 PEQ 精确但仍有效"
+        "volume": "35-55%",
+        "reason": "KADENZ 最佳场景！VDSF 调音准确还原古典音乐的音色和音乐厅空间感。单动圈瞬态自然，乐器质感真实，长时间聆听不疲劳"
+      },
+      {
+        "scenario": "爵士乐/器乐欣赏⭐⭐⭐⭐⭐",
+        "gain": "Low",
+        "filter": "Fast Highpass",
+        "eq": "OFF",
+        "peq": "OFF",
+        "volume": "30-50%",
+        "reason": "单动圈音色统一，钢琴、贝斯、鼓组的音色真实自然。极低失真（≤0.03%）完美还原乐器质感和现场氛围"
+      },
+      {
+        "scenario": "编程工作听音⭐⭐⭐⭐",
+        "gain": "Low",
+        "filter": "Fast Highpass",
+        "eq": "OFF",
+        "peq": "OFF",
+        "volume": "25-40%",
+        "reason": "KADENZ 单动圈天然柔和，无需 PEQ 即可长时间耐听。中性调音不分散注意力，适合编程、写作等需要专注的工作"
+      },
+      {
+        "scenario": "批判性聆听/音频工程⭐⭐⭐⭐⭐",
+        "gain": "Low",
+        "filter": "Fast Highpass",
+        "eq": "OFF",
+        "peq": "OFF",
+        "volume": "按需调整",
+        "reason": "THD ≤0.03% 接近实验室级失真，VDSF 调音准确，适合专业监听和批判性聆听。Fast Highpass 保证 20kHz 内完全平坦"
+      },
+      {
+        "scenario": "流行音乐（适度）⭐⭐⭐",
+        "gain": "Low",
+        "filter": "Fast Highpass",
+        "eq": "OFF",
+        "peq": "OFF",
+        "volume": "35-55%",
+        "reason": "KADENZ 偏监听，流行音乐可能略显平淡。但极低失真和准确音色能展现录音的真实面貌。建议听高品质录音的流行"
       }
     ]
   },
@@ -713,59 +702,104 @@
     },
     
     "soundSignature": {
-      "overall": "饱满温润、细腻耐听，人声靠前",
-      "bass": "量感充足，下潜深，双动圈提供强悍的低频基础",
-      "midrange": "密度高，人声饱满靠前，定制楼氏动铁保证中频质感",
-      "treble": "层次清晰，高频延伸自然，四单元动铁提供细节和空气感",
-      "soundstage": "大声场",
-      "imaging": "层次清晰"
+      "overall": "基于 VDSF 目标曲线，追求准确、自然、均衡的声音重放",
+      "toneBalance": "中性偏监听，能量分布均衡",
+      "bass": {
+        "quantity": "适中",
+        "quality": "干净、有质感、下潜适度",
+        "control": "单动圈提供优秀的低频控制力和一致性"
+      },
+      "midrange": {
+        "position": "自然位置，不前不后",
+        "clarity": "清晰、透明、无染色",
+        "vocals": "真实、自然，还原录音本质",
+        "timbre": "音色准确，乐器还原度高"
+      },
+      "treble": {
+        "extension": "延伸至 21kHz",
+        "brightness": "适中，不刺激",
+        "detail": "细节丰富但不过分强调",
+        "naturalness": "单动圈天然柔和，比动铁更自然"
+      },
+      "soundstage": {
+        "width": "适中，符合 IEM 特性",
+        "depth": "层次清晰",
+        "imaging": "结像准确，定位清晰"
+      },
+      "resolution": "解析力优秀，得益于极低失真（≤0.03%）",
+      "dynamics": "大动态性能出色，即使在高声压下仍保持低失真",
+      "coherence": "单动圈带来优秀的相位一致性和音色统一性"
     },
     
     "pairingNotes": [
-      "HiBy FC5 的 CS43198 DAC 芯片音色中性偏暖，与 VULKAN2 搭配适中",
-      "平衡输出（4.4mm）可提供更好的分离度和声场",
-      "FC5 输出阻抗低（~1-2Ω），能很好控制 35Ω 的 VULKAN2",
-      "高灵敏度（113dB/mW）建议使用低增益，避免底噪",
-      "网易云音乐播放时注意选择无损音质",
-      "✅ 工作模式 PEQ：6kHz -2.5dB + 8kHz -2.0dB + 4kHz High Shelf -1.0dB",
-      "✅ 适合长时间编程工作听音，超强耐听度，音乐不分散注意力",
-      "⚠️ 避免 Vocal EQ：会增强 2-6kHz 导致齿音明显，已用精确 PEQ 替代"
+      "✅ HiBy FC5 + KADENZ 是完美搭配",
+      "✅ FC5 的 CS43198 DAC 芯片中性偏暖，与 KADENZ 的中性调音互补，音色自然",
+      "✅ 平衡输出（4.4mm）提供更好的分离度和声场",
+      "✅ FC5 输出阻抗低（~1-2Ω），能完美控制 35Ω 的 KADENZ",
+      "✅ 极高灵敏度（122dB/Vrms）建议使用低增益，避免底噪",
+      "✅ KADENZ 无需任何 EQ 或 PEQ，保持 OFF 即可",
+      "✅ 单动圈天然柔和，长时间聆听极其耐听",
+      "✅ THD ≤0.03%，失真比 VULKAN2 低 10 倍，音质飞跃",
+      "✅ 适合古典、爵士、批判性聆听",
+      "⚠️ 流行音乐可能略显平淡（相比 VULKAN2 的饱满温润）"
     ],
     
     "optimizationTips": [
       "MacBook Pro 使用时建议关闭系统音效处理",
       "网易云音乐设置中开启「独占音频输出」（如支持）",
-      "播放无损音乐（FLAC/APE）或高品质流媒体",
+      "✅ 播放无损音乐（FLAC/APE）或高品质流媒体 - KADENZ 能清晰辨别音质差异",
+      "✅ 优先选择古典、爵士等录音质量高的音乐 - 充分发挥 KADENZ 的监听特性",
       "FC5 预热 10-15 分钟后音质更稳定",
-      "定期清洁 MMCX 接口和耳机导管",
+      "定期清洁 0.78mm 2-pin 接口和耳机导管",
+      "✅ 可尝试 A/B/C 三种导管，微调频响特性",
+      "✅ 尝试使用随附的 4.4mm C 口解码耳放线直连 MacBook",
       "可尝试使用 HiByMusic 播放器替代网易云，支持更高规格音频"
     ]
   },
   
   "upgradePath": {
     "description": "潜在升级路径",
+    "notes": "KADENZ 已是旗舰级耳机，当前配置已很完善，无明显瓶颈",
     "options": [
       {
         "component": "播放器",
         "suggestion": "更换为专业播放软件（如 Audirvana, Roon）",
-        "benefit": "更好的音频处理和比特完美输出"
+        "benefit": "更好的音频处理和比特完美输出",
+        "priority": "中",
+        "notes": "KADENZ 解析力高，能听出播放器差异"
       },
       {
-        "component": "DAC",
+        "component": "DAC/耳放",
         "suggestion": "升级到台式 DAC/耳放（如 Topping DX9, iFi Pro iDSD）",
-        "benefit": "更强驱动力和更低失真"
+        "benefit": "更低输出阻抗和底噪，更强驱动力",
+        "priority": "低",
+        "notes": "FC5 已能很好驱动 KADENZ，提升有限"
       },
       {
         "component": "线材",
         "suggestion": "升级为高级升级线",
-        "benefit": "理论上可能改善声音（主观因素较大）"
+        "benefit": "理论上可能改善声音（主观因素较大）",
+        "priority": "极低",
+        "notes": "标配线材已足够优秀，性价比低"
       },
       {
         "component": "耳机",
-        "suggestion": "根据听音偏好扩展耳机库",
-        "benefit": "不同音色风格的体验"
+        "suggestion": "补充一个偏音乐性的耳机（如流行向）",
+        "benefit": "与 KADENZ 的监听向互补",
+        "priority": "中",
+        "notes": "KADENZ 偏监听，可补充一个听流行的耳机"
       }
-    ]
+    ],
+    "previousSetup": {
+      "earphone": "DUNU VULKAN 2",
+      "reason": "卖出原因：与 KADENZ 相比，VULKAN2 失真高 10 倍（0.3% vs 0.03%），圈铁高频略刺激，不如单动圈自然耐听",
+      "transaction": {
+        "purchasePrice": 1777,
+        "sellPrice": 1600,
+        "loss": 177,
+        "notes": "¥177 的亏损完全值得，换来失真低 10 倍的旗舰单动圈"
+      }
+    }
   },
   
   "maintenance": {
@@ -777,9 +811,11 @@
     ],
     "iem": [
       "定期清洁耳机导管和耳套",
-      "检查 MMCX 接口是否松动",
-      "避免大音量长时间使用",
-      "妥善收纳，避免线材打结"
+      "检查 0.78mm 2-pin 接口是否松动",
+      "定期更换防尘滤网（第三代专利防堵塞滤波器）",
+      "尝试不同导管（A/B/C）找到最适合的声音",
+      "避免大音量长时间使用，保护听力",
+      "妥善收纳在随附的便携皮包中，避免线材打结"
     ]
   },
   
@@ -797,18 +833,38 @@
       "productMain": "data/devices/images/hiby-fc5/fc5-product-main.png",
       "eqPresetsOverview": "data/devices/images/hiby-fc5/eq-presets-overview.png"
     },
-    "vulkan2Info": "产品包装及官方参数",
-    "frequencyResponseChart": "附图2 - 频响曲线",
-    "productPhotos": "附图1 - 产品参数铭牌"
+    "kadenzInfo": "data/devices/moondrop-kadenz.json",
+    "kadenzOfficial": "https://moondroplab.com/cn/products/kadenz",
+    "kadenzFrequencyResponse": "data/devices/images/moondrop-kadenz/frequency-response.jpg"
   },
   
   "metadata": {
-    "configVersion": "1.5",
-    "lastReviewed": "2025-11-27",
-    "lastUpdated": "2025-11-27",
+    "configVersion": "2.0",
+    "lastReviewed": "2024-11-27",
+    "lastUpdated": "2024-11-27",
     "dataQuality": "high",
-    "notes": "基于官方规格、产品铭牌、频响曲线图和实际使用经验创建，针对编程工作场景深度优化",
+    "notes": "更换为水月雨 KADENZ 旗舰单动圈耳机，失真低 10 倍（≤0.03% vs 0.3%），单动圈音色自然耐听，完美匹配用户的高频敏感型听音偏好",
     "changeLog": [
+      {
+        "version": "2.0",
+        "date": "2024-11-27",
+        "changes": [
+          "🎉 重大升级：更换耳机 VULKAN 2 → KADENZ 终章",
+          "交易详情：¥790 买入 KADENZ（原价 ¥2599，3折），¥1600 卖出 VULKAN 2（成本 ¥1777）",
+          "净花费：-¥810（倒赚 ¥810！）",
+          "失真飞跃：THD 从 0.3% 降至 ≤0.03%，低 10 倍！",
+          "调音转向：从饱满温润的音乐性 → 准确中性的监听性（VDSF 调音）",
+          "单元变化：8单元圈铁（2动圈+6动铁）→ 1×10mm 第二代专利超线性动圈",
+          "音色特性：单动圈相位一致性极佳，音色统一自然，比圈铁更柔和耐听",
+          "完美匹配：单动圈高频天然柔和，无齿音问题，无需任何 PEQ",
+          "移除所有 PEQ 配置：KADENZ 原声即完美，保持 EQ/PEQ 全部 OFF",
+          "更新推荐设置：所有场景使用原声（Fast Highpass + EQ OFF + PEQ OFF）",
+          "最佳场景：古典音乐、爵士乐、批判性聆听、专业监听",
+          "适用音乐类型更新：古典、爵士、器乐 > 流行（偏监听）",
+          "配件升级：赠送 4.4mm 全平衡 C 口解码耳放线 + 可换导管（A/B/C）× 3",
+          "记录 VULKAN 2 卖出信息：¥1777 买入，¥1600 卖出，亏损 ¥177"
+        ]
+      },
       {
         "version": "1.5",
         "date": "2025-11-27",
